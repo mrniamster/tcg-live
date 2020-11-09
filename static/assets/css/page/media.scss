@@ -1,0 +1,55 @@
+@import '../_main.scss','../mixin.scss';
+.layoutx{
+    hr{
+    @include margin(0,0,36px,0);
+    }
+    .profile{
+        &:first-child{
+        @include padding(0,20px,0,0);
+        @include bp(md){
+            @include padding(0,0,0,0px);
+        }
+        }
+        &:last-child{        
+            @include padding(0,0,0,20px);
+            @include bp(md){
+                @include padding(0,0,0,0px);
+            }
+            }
+         @include padding(0,20px,0,20px);
+         @include bp(md){
+            @include padding(20px,0,20px,0px);
+        }  
+    }
+    #article{
+        padding-top: 0px;
+        padding-right: 0;
+        padding-bottom: 0px;
+        padding-left: 0;
+    }
+    .frame{
+        @include padding(24px,24px,24px,24px);
+        background-color: rgba(90, 102, 52, 0.25);
+        @include bp(md){
+            width: 200px;margin: 0 auto;
+        }
+    }
+    .info,.blog-box{
+        @include padding(24px,0,0,0);
+        .title{
+            @include p(20px,'Chap',26.22px);
+        }
+        .date,.author{
+            @include p(18px,$pri-font,18px);
+            @include padding(8px,0,0,0)
+        }
+    }
+
+        div#article:not(:first-child):not(:last-child)
+        {
+            @include padding(80px,0,80px,0);
+        }
+        div#article:last-child{
+            @include padding(0,0,120px,0);
+        }
+}

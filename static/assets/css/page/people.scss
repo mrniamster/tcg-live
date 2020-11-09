@@ -1,0 +1,35 @@
+@import '../_main.scss','../mixin.scss';
+p#filter{ @include  margin(0,0,94px,0);}
+hr:nth-child(1){@include margin(0,0,32px,0);}
+.location{
+    @include margin(40px,0,0,0);
+}
+#identity { 
+     @include padding(0px,0,75px,0);
+    .profile{
+        .info{
+            @include padding(24px,0,0,0);
+            p{
+            &:first-child{@include p(20px,$sec-font,26px);}
+            &:not(:first-child):not(:last-child){@include padding(8px,0,24px,0);@include p(18px);}    
+            &:last-child{@include p(14px,$pri-font);letter-spacing: 0.05em;
+            }
+            }
+            .plus img{@include padding(0,8px,0,0);@include bp(md){width: 10px;}}
+        }
+        &:first-child(){
+            @include padding(0px,40px,0,0px); 
+        }
+        &:last-child(){
+            @include padding(0,0px,0,40px); 
+        }
+    }
+    &:first-child(){
+        @include padding (0px,0px,75px,0px);
+        //background-color: yellow;
+    }
+    &:last-child(){
+    @include margin(0px,0px,0px,0px);
+   // background-color: blue;
+}
+}

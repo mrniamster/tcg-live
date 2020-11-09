@@ -1,0 +1,31 @@
+@import '../_main.scss','../mixin.scss';
+#clients{
+    .box{
+        background-color:#f3f8fc;
+        img{
+            @include padding(175px,181px,175px,181px);
+        }
+
+    }
+    .col-md-6{
+        &:first-child{
+        @include padding (0,20px,0,0);
+        @include bp(md){
+            @include padding (0,0,20px,0);
+        }
+            }
+        &:last-child{
+                @include padding (0,0,0,20px);
+                @include bp(md){
+                    @include padding (20px,0,0px,0);
+                }
+            }
+    }
+
+    >div{
+        &:not(:nth-child(2)):not(:nth-child(5)) {
+            @include padding (40px,0,40px,0);   
+        }
+    }
+    
+}

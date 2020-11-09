@@ -1,0 +1,318 @@
+$pri-color: #5A6634;
+$sec-color: white;
+$pri-font:'maison_neuelight';
+$sec-font:'Chap';
+$bp:800px;
+@import 'mixin.scss' ;
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css);
+@import url('/assets/fonts/stylesheet.css');
+.col-md-6,.row,.col-md-4,.col-md-8,{
+  @include pad(0px);
+}
+#navbar {
+    height: 128px;
+    width: 100%;
+    @include pad(0px);
+    background-color: $sec-color;
+    .container-fluid{
+      background: white;
+      z-index: 1;
+      @include bp(lg){
+      @include margin(0,60px,0,60px);
+      }
+      @include bp(md){
+        @include margin(0,0,0,0px);
+        }
+    }
+    .navbar-brand{
+      @include pad(0px);
+      width: 160px;
+      height: 80px;
+    }
+    .nav-link{
+      font-size: 18px;
+      @include bp(lg)
+      {padding: 0 12px;}
+      @include bp(md)
+      {padding: 10px 10px}
+    }
+    
+    a{
+      color:$pri-color;
+      &:hover{
+        text-decoration: none;
+      }
+      }
+     img{
+      @include bp(lg){height: 80px;}
+
+     } 
+  }
+
+img{
+    max-width: 100%;
+    height: auto;
+  }
+  p{
+    font-family:'maison_neuelight';
+    color:$pri-color;
+    margin: 0;
+    line-height: 125%;
+
+  }
+.p18{
+@extend p;
+font-family:$pri-font;
+font-size: 18px;
+@include bp(md){
+  font-size: 9px;
+}
+}
+
+.p18h{
+  @extend .p18;
+  padding-bottom: 32px;
+  @include bp(md){
+    padding-bottom: 16px;
+  }
+  
+}
+.p20{
+  @extend p;
+  font-size: 20px;
+  line-height: 26px;
+    padding-bottom: 32px;
+    @include bp(md){font-size: 10px; line-height:8px;}
+  }
+.p32{
+    @extend p;
+    font-size: 32px;
+    font-family:'Chap';
+    line-height: 47px;
+    @include bp(md){font-size: 16px; line-height: 28px;}
+    }
+
+  .p36{
+    @extend p;
+    font-family: $sec-font;
+    line-height: 47px;
+    font-size: 36px;
+    @include bp(md){
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }  
+
+  .p24{
+    @extend p;
+    font-family: $pri-font;
+    line-height: 30px;
+    font-size: 24px;
+    @include bp(md){
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }  
+
+    select{
+    @extend p;
+    line-height: 18px;
+    @include padding(0,0,8px,0);
+    width: 180px;
+    height: 26px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    background: url(https://i.ibb.co/qD78gNx/arrow.png) no-repeat right;
+    border-bottom: 1px solid $pri-color;
+    }
+
+hr{
+  border: 1px solid #5A6634;
+  width: 100%;
+}
+
+  #footer{
+    background-color: $pri-color;
+    height: 210px;
+    justify-content: space-between;
+    @include bp(md){
+      justify-content: center !important;
+      div:nth-child(1){
+        text-align: center;
+      }
+    }
+    p{
+      color:$sec-color;
+      margin: 0;
+      line-height: 125%;
+      &:nth-last-child(odd){
+        color: rgba(255, 255, 255, 0.5)
+      }
+    }
+    a {
+      color: $sec-color;
+      .fa-inverse{
+        color: $pri-color;
+      }
+    }
+  }
+ 
+ //elements
+  .btn-primary{
+    background-color: #CEE4F1;
+    color: #5A6634;
+    display: block;
+    border-radius: 30px;
+    align-items: flex-start;
+    padding: 7.5px 32px 7.5px 32px;
+    text-align: center;
+    font-size: 18px;
+    width: fit-content;
+    border-color: transparent;
+    @include bp(md){
+      font-size: 0.5em;
+      padding: 3.5px 16px 3.5px 16px;
+    }
+    text-decoration: none;
+    cursor: pointer;
+        &:hover{
+    background-color: #CEE4F1;
+    color: #5A6634;
+    border-color: transparent;
+  
+         }
+
+  }
+//Components
+.layout{
+  @include padding(0,80px,0,80px);
+}
+
+.layoutx-300{
+  @include padding(120px,300px,120px,300px);
+  @include bp(md){
+    @include padding(120px/2,300px/2,120px/2,300px/2);
+  }
+}
+
+.layoutx{
+  @include padding(120px,80px,120px,80px);
+}
+.layout300x{
+  @include padding(0px,220px,0px,220px);
+  @include bp(md){
+    @include padding(0,220px/2,0px/2,220px/2);
+  }
+}
+
+.bannerComp{
+position: relative;
+margin: 0;
+padding: 0;
+h1{
+font-family: Chap;
+font-size: 72px;
+line-height: 100%;
+color: $sec-color;
+@include bp(md){
+  font-size: 35px;
+}
+position: absolute;
+vertical-align:middle;
+top: 50%;
+left: 45%;
+width: 80%;
+transform: translate(-50%,-50%);
+}
+}
+.textimgComp{
+ @extend .layout;
+ @include padding(120px,auto,120px,auto);
+  font-size: 1.5rem;
+  @include flex(11.73%,44.135%);
+  @include bp(md){
+    font-size: .75rem;
+  }
+  .p18{
+    @extend .p18;
+    @include padding(0,0,32px,0)
+  }
+  .btn-primary{
+    @extend .btn-primary;
+    @include margin(32px,0,0,0)
+  }
+
+  img{
+    height: 400px; 
+  }
+  .row{
+    max-width: auto;
+    margin: 0 auto;
+  }
+  
+}
+
+//index.md
+.imgComp{
+    @extend .layout;
+    @include padding(0,auto,120px,auto);
+    img{
+      width: 1280px;
+      max-height: 758px;
+    }
+    .btn-primary{
+      @include margin(46px,0,0,0);
+    }
+
+}
+
+.clients{
+  //opacity: 0.25;
+  background-color: #f3f8fc;
+  @include padding (120px,80px,120px,80px);
+  @include margin (0,0,120px,0);
+  .p18{
+    @include margin(0,0,32px,0);
+  }
+}
+
+.brands{
+  @extend .layout;
+  display: flex;
+  justify-content: space-around;
+flex-flow: row wrap;
+.items{
+  width: 290px;
+height: 380px;
+margin-right: 40px;
+flex-grow: 1;
+}
+}
+.content{
+  margin: (120px 300px);
+  @include bp(md){ margin: (60px 60px);}
+}
+
+
+/* The Modal (background) */
+.modal-content{
+  border-radius: 20px;
+}
+.modal-body{
+  @include margin(80px,80px,80px,80px);
+  padding: 0px;
+  .modal-info{
+    @include padding(0,0,0,40px);
+    @include bp(md){@include padding(40px,0,0,0px);}
+    .name{@include p(36px,$sec-font,125%)}
+    .job-title,.contact,.email,.bio{@include p(18px,$pri-font,125%)}
+    .bio,.contact{@include padding(32px,0,0,0);}
+    .email{@include padding(8px,0,0,0);}
+  }
+}
+.modal-dialog{
+  max-width: 1220px;
+}
+///bootstrap-elements-config

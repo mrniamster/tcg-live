@@ -1,0 +1,79 @@
+$MQs: true;
+@mixin bp($point) {
+  @if ($MQs) {
+    $bp-babybear: "(max-width: 600px)";
+    $bp-mamabear: "(max-width: 1250px)";
+    $bp-papabear: "(max-width: 1440px)";
+  
+    @if $point == lg {
+      @media #{$bp-papabear} { @content; }
+    }
+    @else if $point == md{
+      @media #{$bp-mamabear} { @content; }
+    }
+    @else if $point == sm {
+      @media #{$bp-babybear}  { @content; }
+    }
+  }
+}
+
+@mixin p($size,$font:$pri-font,$lh:inherit){
+  font-size: $size;
+  font-family: $font;
+  line-height: $lh;
+  @include bp(md){font-size: $size/2;line-height: $lh/2;}
+}
+@mixin pad($val){
+padding: $val;
+margin: $val;
+}
+@mixin padding($T,$R,$B,$L) {
+  padding-top: $T;
+  padding-right: $R;
+  padding-bottom: $B;
+  padding-left: $L;
+  @include bp(md) {
+    padding-top: $T/2;
+  padding-right: $R/2;
+  padding-bottom: $B/2;
+  padding-left: $L/2;
+  }
+}
+
+@mixin margin($T,$R,$B,$L) {
+  margin-top: $T;
+  margin-right: $R;
+  margin-bottom: $B;
+  margin-left: $L;
+  @include bp(md) {
+    margin-top: $T/2;
+    margin-right: $R/2;
+    margin-bottom: $B/2;
+    margin-left: $L/2;
+  }
+}
+
+@mixin  flex($colx,$col2x) {
+  .flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .flex-item{
+    @include pad(0);
+    flex: 0 0 auto;
+    width: $col2x ;
+    @include bp(md){
+      width: $col2x *2;
+    }
+  }
+  #spacer{
+    @include pad(0);
+    flex: 0 0 auto;
+    width: $colx;
+    @include bp(md){
+      width: $colx *2;
+    }
+  }
+  
+}

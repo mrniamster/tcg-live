@@ -1,0 +1,35 @@
+<template>
+  <div>
+    <bannerComp
+      img="clients.png"
+      title="Our Clients"
+    />
+
+    <div class="layoutx" id="clients">
+      <p class="p18h">SOME OF OUR ESTEEMED CLIENTS</p>
+      <div class="row" v-for="i in 4">
+        <div class="col-md-6">
+          <div class="box">
+          <img :srcset="require('~/assets/img/clients/nelly.png').srcSet"  class="img-fluid">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="box">
+          <img :srcset="require('~/assets/img/clients/nelly.png').srcSet"  class="img-fluid">
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  watch: {},
+  head: {
+    link: [{ rel: 'stylesheet', href: '/assets/css/page/clients.css' }],
+  },
+}
+</script>
+
+<style lang="scss" scoped></style>

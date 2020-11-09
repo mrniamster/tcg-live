@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Chap';
+    src: url('Chap Regular.eot') format('eot'),
+         url('Chap Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    line-height: 100%;
+}
+
+@font-face {
+    font-family: 'maison_neuelight';
+    src: url('maisonneue-light-webfont.woff2') format('woff2'),
+         url('maisonneue-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'maison_mono';
+    src: url('maisonneue-mono-webfont.woff2') format('woff2'),
+         url('maisonneue-mono-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}

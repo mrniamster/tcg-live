@@ -1,0 +1,13 @@
+$color: yellow;
+body{
+    background-color: $color;
+}
+
+#navbar {
+    height: 48px;
+    width: 100%;
+    background-color: red;
+  }
+  #navbar a {
+    color: white;
+  }

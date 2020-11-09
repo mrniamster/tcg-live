@@ -1,0 +1,44 @@
+@import '_main.scss','mixin.scss';
+
+#ourpeople{
+    @include margin(0,0,120px,0)
+    p{
+        @include padding(0,0,32px,0);
+    }
+    .btn-primary{
+        @include margin(46px,0,0,0);
+    }
+}
+
+.cilents{
+    @extend .layout;
+   @include margin(120px,0,120px,0);
+   
+}
+
+.ourbrands{
+    
+    hr{
+        @include margin(27px,0,38px,0);   
+    }
+    .row{
+        &:not(:nth-of-type(1)){
+        @include margin(80px,0,80px,0)
+        @include bp(md){@include margin(80px/2,0,80px/2,0)}
+        }
+        &:last-of-type(){
+        @include margin(80px,0,32px,0);
+        @include bp(md){@include margin(80px/2,0,32px/2,0)}
+        }
+      .p20{
+          font-family: 'Chap';
+   @include padding(20px,0,0,0)
+   
+   
+      }
+    }
+    .btn-primary{
+        @include margin(32px,0,120px,0);
+        @include bp(md){ @include margin(32px/2,0,120px/2,0);}
+    }
+}

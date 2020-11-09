@@ -1,0 +1,28 @@
+@import '../_main.scss','../mixin.scss';
+.thead{
+    
+    p{
+        &:last-child{
+            @include padding(16px,0,0,0);               
+        }
+    }
+}
+.box1{
+    .row {
+        &:not(:first-child):not(:last-child){
+        @include margin (120px,0,120px,0)
+       
+        }
+        .col-md-6:first-child{@include padding(0,20px,0,0)}
+        .col-md-6:last-child{@include padding(0,0,0,20px)}
+        .p18{ @include padding(18px,0,0,0)}
+        button{ @include margin(32px,0,0,0)}
+
+    }
+}
+.layoutx{ padding-top: 0px !important;}
+
+.bg-pri-color{
+background-color: #f3f8fc;
+
+}
