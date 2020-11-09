@@ -138,10 +138,4 @@ export default {
 </script>
 
 <style>
-.nuxt-content h1 {
-  color: red;
-}
-.nuxt-content p {
-  color: black;
-}
 </style>

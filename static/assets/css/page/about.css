@@ -501,6 +501,12 @@ hr {
   height: 400px;
 }
 
+@media (max-width: 1250px) {
+  .textimgComp img {
+    height: auto;
+  }
+}
+
 .textimgComp .row {
   max-width: auto;
   margin: 0 auto;
@@ -862,6 +868,40 @@ hr {
     padding-right: 110px;
     padding-bottom: 60px;
     padding-left: 110px;
+  }
+}
+
+#footext {
+  padding-top: 120px;
+  padding-right: 220px;
+  padding-bottom: 120px;
+  padding-left: 220px;
+}
+
+@media (max-width: 1250px) {
+  #footext {
+    padding-top: 60px;
+    padding-right: 110px;
+    padding-bottom: 60px;
+    padding-left: 110px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #footext {
+    padding-top: 60px;
+    padding-right: 45px;
+    padding-bottom: 60px;
+    padding-left: 45px;
+  }
+}
+
+@media (max-width: 1250px) and (max-width: 1250px) {
+  #footext {
+    padding-top: 30px;
+    padding-right: 22.5px;
+    padding-bottom: 30px;
+    padding-left: 22.5px;
   }
 }
 /*# sourceMappingURL=about.css.map */

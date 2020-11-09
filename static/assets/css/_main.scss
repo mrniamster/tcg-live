@@ -246,6 +246,9 @@ transform: translate(-50%,-50%);
 
   img{
     height: 400px; 
+    @include bp(md){
+      height:auto;
+    }
   }
   .row{
     max-width: auto;

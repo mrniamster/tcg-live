@@ -501,6 +501,12 @@ hr {
   height: 400px;
 }
 
+@media (max-width: 1250px) {
+  .textimgComp img {
+    height: auto;
+  }
+}
+
 .textimgComp .row {
   max-width: auto;
   margin: 0 auto;

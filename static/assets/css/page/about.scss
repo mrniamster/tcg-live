@@ -44,3 +44,10 @@ font-family:'maison_neuelight';
         @include padding(120px,220px,120px,220px)
     }
 }
+
+#footext{
+    @include padding(120px,220px,120px,220px);
+    @include bp(md){
+        @include padding(60px,45px,60px,45px); 
+    }
+}

@@ -1,7 +1,5 @@
-<template>
-    <div class="dark">
+<template>  
    <Nuxt/>
-    </div>
 </template>
 
 <script>
@@ -11,8 +9,5 @@
 </script>
 
 <style scoped>
-.dark{
-    background: black;
 
-}
 </style>

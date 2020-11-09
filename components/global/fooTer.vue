@@ -1,7 +1,8 @@
 <template>
   <footer
     id="footer"
-    class="navbar navbar-fixed-bottom layout"
+    data-v-314f53c6=""
+    class="navbar navbar-fixed-bottom justify-content-between layout"
   >
     <div class="">
       <p>Third Culture Group</p>

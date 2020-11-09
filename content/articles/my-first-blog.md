@@ -9,8 +9,6 @@ If you haven't seen my previous blog make sure to check this out
 [Go TO HOME](/)
 its been a long time since i hwas wokring on this prject and finally its over but yes , let me show you 
 So where to start?
-
-
 ## This is how i started developing
 When i was small kid i left play cs and raycity my whole life and now i learnt this
    Nam libero tempore, cum soluta nobis est eligendi optio cumque

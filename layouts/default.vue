@@ -1,25 +1,16 @@
-/* eslint-disable prettier/prettier */
 <template>
   <div>
-   <navBar/>
-    <div id="default-body">
+   <navBar/> 
       <Nuxt />
-    </div>
-    BELOW
+    <fooTer/>
   </div>
 </template>
 
 <script>
-import navBar from '~/components/global/navBar'
 export default {
-   components: {
-    navBar,
-  },
+   components: {},
 }
 </script>
 <style scoped>
-#default-body {
-  max-width: 800px;
-  margin: 0 auto;
-}
+
 </style>
