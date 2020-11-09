@@ -484,7 +484,7 @@ hr {
 .textimgComp .btn-primary {
   margin-top: 32px;
   margin-right: 0;
-  margin-bottom: 0;
+  margin-bottom: 32px;
   margin-left: 0;
 }
 
@@ -492,7 +492,7 @@ hr {
   .textimgComp .btn-primary {
     margin-top: 16px;
     margin-right: 0;
-    margin-bottom: 0;
+    margin-bottom: 16px;
     margin-left: 0;
   }
 }
