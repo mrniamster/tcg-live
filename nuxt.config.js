@@ -80,7 +80,9 @@ export default {
     }
   },
   generate: {
-    routes: [],
+    routes: [
+      '/blog/tcgblog'
+    ],
   },
   
   server: {     

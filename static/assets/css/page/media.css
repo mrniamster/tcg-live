@@ -105,7 +105,8 @@ p, .p18, .p18h, .textimgComp .p18, .p20, .p32, .p36, .p24, select {
 
 .p18, .p18h, .textimgComp .p18 {
   font-family: "maison_neuelight";
-  font-size: 18px;
+  letter-spacing: 0.05em;
+  font-size: 18px !important;
 }
 
 @media (max-width: 1250px) {
@@ -204,6 +205,10 @@ select {
 hr {
   border: 1px solid #5A6634;
   width: 100%;
+}
+
+a:hover {
+  color: #5A6634;
 }
 
 #footer {

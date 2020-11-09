@@ -5,8 +5,8 @@
     class="navbar navbar-fixed-bottom justify-content-between layout"
   >
     <div class="">
-      <p>Third Culture Group</p>
-      <p>info@thirdculturegroup.com</p>
+      <p class="p18">Third Culture Group</p>
+      <p class="p18">info@thirdculturegroup.com</p>
     </div>
     <div class="">
       <a href=""

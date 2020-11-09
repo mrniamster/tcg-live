@@ -63,7 +63,8 @@ img{
 .p18{
 @extend p;
 font-family:$pri-font;
-font-size: 18px;
+letter-spacing: 0.05em;
+font-size: 18px !important;
 @include bp(md){
   font-size: 9px;
 }
@@ -132,6 +133,8 @@ hr{
   border: 1px solid #5A6634;
   width: 100%;
 }
+
+a{&:hover{color:$pri-color}}
 
   #footer{
     background-color: $pri-color;

@@ -1,0 +1,16 @@
+@import '../_main.scss','../mixin.scss';
+h1{@include p('Chap' ,72px,100%);}
+h2{@extend .p18h;}
+h3{@extend .p36;}
+h4{@extend .p18;}
+h5{@extend .p20;}
+p{@extend .p24;}
+
+.nuxt-content{
+    h2{
+        &:not(:first-of-type){
+            // background-color: red;
+            @include padding(16px,0,32px,0)
+        }
+    }
+}
