@@ -2,7 +2,7 @@
   <div class="container mt-5">
     <!--Section: Content-->
     <section class="">
-      <!-- Section heading -->
+      <!-- Section headings -->
       <h3 class="text-center font-weight-bold mb-5">Latest news</h3>
 
       <!-- Grid row -->
