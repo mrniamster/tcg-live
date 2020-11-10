@@ -5,17 +5,29 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'Tcg Site' },
+       // Twitter Card
+       {name: 'twitter:card', content: 'summary'},
+       {name: 'twitter:title', content: 'Vue Social Cards Example'},
+       {name: 'twitter:description', content: 'Vue sample site showing off Twitter and Facebook Cards.'},
+       // image must be an absolute path
+       {name: 'twitter:image', content:'https://mublackbook.in/_nuxt/img/1e4ffe8-1440.png'},
+       // Facebook OpenGraph
+       {property: 'og:title', content: 'Vue Social Cards Example'},
+       {property: 'og:site_name', content: 'Vue Example'},
+       {property: 'og:type', content: 'website'},
+       {property: 'og:image', content: 'https://mublackbook.in/_nuxt/img/1e4ffe8-1440.png' },
+       {property: 'og:description', content: 'Vue sample site showing off Twitter and Facebook Cards.'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     //  { rel: 'stylesheet', href: 'assets/css/bootstrap.min.css' },
     //{ rel: 'stylesheet', href: 'assets/css/bootstrap.min.css' },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css',
-      },
+      // {
+      //   rel: 'stylesheet',
+      //   href:
+      //     'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css',
+      // },
       // {
       //   rel: 'stylesheet',
       //   href:
@@ -23,13 +35,16 @@ export default {
       // },
     ],
     script: [
+      // {
+      //   crossorigin: 'anonymous',
+      //   src:
+      //     'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js',
+      //   integrity:
+      //     'sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD',
+      // },
       {
-        crossorigin: 'anonymous',
-        src:
-          'https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js',
-        integrity:
-          'sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD',
-      },
+        src:'/assets/js/main.js'
+      }
     ],
   },
 
@@ -61,6 +76,8 @@ export default {
     // https://go.nuxtjs.dev/content
      '@nuxt/content',
     'nuxt-responsive-loader',
+    '@nuxtjs/sitemap',
+    '@nuxtjs/pwa',
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)

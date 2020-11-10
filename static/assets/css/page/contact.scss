@@ -60,7 +60,10 @@ display: flex
     }
     .documents{
         @include padding(120px,0,0,0); 
-        a#download{@include p(14px,$pri-font,14px);}
+        a#download{
+            @include p(14px,$pri-font,14px);
+            }
+        
  .frame{
     @include bp(md){
         width: 200px;margin: 0 auto;
@@ -86,3 +89,9 @@ a#download{@include p(14px,$pri-font,14px);}
     }
     }
 }
+
+#download > span > img  {
+    @include bp(md){
+         height: 1em;
+       }
+     }

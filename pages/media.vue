@@ -29,7 +29,7 @@
           <div class="row" >
             <div id="article" class="d-md-flex flex-nowarp  justify-content-around box" v-for="i in 3" >
           <div v-for="i in 2" class="blog-box profile">
-               <img :srcset="require('~/assets/img/media/aman.png').srcSet">
+               <nuxt-link to="/blog/tcgblog"><img :srcset="require('~/assets/img/media/aman.png').srcSet"></nuxt-link>
                <p class="title">Several word long title of example article</p>
                <p class="author">Writers Name</p>
             </div>

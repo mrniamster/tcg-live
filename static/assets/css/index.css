@@ -1,5 +1,10 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css);
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css);
 @import url("/assets/fonts/stylesheet.css");
+body {
+  margin: 0px;
+}
+
 .col-md-6, .row, .col-md-4, .col-md-8 {
   padding: 0px;
   margin: 0px;
@@ -63,6 +68,8 @@
 
 #navbar .nav-link {
   font-size: 18px;
+  font-family: "maison_neuelight";
+  line-height: 21.09px;
 }
 
 @media (max-width: 1440px) {
@@ -106,12 +113,12 @@ p, .p18, .p18h, .textimgComp .p18, .p20, .p32, .p36, .p24, select {
 .p18, .p18h, .textimgComp .p18 {
   font-family: "maison_neuelight";
   letter-spacing: 0.05em;
-  font-size: 18px !important;
+  font-size: 18px;
 }
 
 @media (max-width: 1250px) {
   .p18, .p18h, .textimgComp .p18 {
-    font-size: 9px;
+    font-size: 12px;
   }
 }
 
@@ -259,6 +266,7 @@ a:hover {
   padding: 7.5px 32px 7.5px 32px;
   text-align: center;
   font-size: 18px;
+  font-family: "maison_neuelight";
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -269,7 +277,7 @@ a:hover {
 
 @media (max-width: 1250px) {
   .btn-primary, .textimgComp .btn-primary {
-    font-size: 0.5em;
+    font-size: 0.8em;
     padding: 3.5px 16px 3.5px 16px;
   }
 }
@@ -661,6 +669,12 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
+  .modal-body .modal-info :nth-child(2) {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 1250px) {
   .modal-body .modal-info {
     padding-top: 0;
     padding-right: 0;
@@ -713,6 +727,21 @@ a:hover {
   }
 }
 
+@media (max-width: 1250px) {
+  .modal-body .modal-info .job-title, .modal-body .modal-info .contact, .modal-body .modal-info .email, .modal-body .modal-info .bio {
+    font-size: 18px;
+    font-family: "maison_neuelight";
+    line-height: inherit;
+  }
+}
+
+@media (max-width: 1250px) and (max-width: 1250px) {
+  .modal-body .modal-info .job-title, .modal-body .modal-info .contact, .modal-body .modal-info .email, .modal-body .modal-info .bio {
+    font-size: 9px;
+    line-height: inherit/2;
+  }
+}
+
 .modal-body .modal-info .bio, .modal-body .modal-info .contact {
   padding-top: 32px;
   padding-right: 0;
@@ -747,6 +776,17 @@ a:hover {
 
 .modal-dialog {
   max-width: 1220px;
+}
+
+.download {
+  background-image: url(/assets/img/download.svg);
+  display: inline;
+}
+
+@media (max-width: 1250px) {
+  .download {
+    height: 1em;
+  }
 }
 
 #ourpeople {
@@ -826,6 +866,12 @@ a:hover {
     margin-right: 0;
     margin-bottom: 19px;
     margin-left: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .ourbrands .row .col-md-3 {
+    text-align: center;
   }
 }
 
