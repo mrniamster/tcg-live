@@ -1,6 +1,7 @@
 ---
 title: Why giving up alcohol improves your immune system
-description: II will teach you how t o get started with nuxt, hope u knowvvue js
+description: on this blog i will teach you how t o get started with nuxt, hope u knowvvue
+  js
 author: Luka Fabris
 img: media/mumbai.png
 
