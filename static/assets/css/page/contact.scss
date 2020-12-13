@@ -1,4 +1,7 @@
 @import '../_main.scss','../mixin.scss','media.scss';
+a{
+    color: $pri-color;
+}
 .layoutx.box1{
     .ownbrands {
     p{

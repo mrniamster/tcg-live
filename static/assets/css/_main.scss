@@ -344,3 +344,9 @@ flex-grow: 1;
     height: 1em;
   }
 }
+
+
+//lightdim
+.dim{
+  -webkit-filter: brightness(50%);
+}

@@ -1,4 +1,12 @@
 @import '../_main.scss','../mixin.scss';
+.thead{
+    
+    p{
+        &:last-child{
+            @include padding(16px,0,0,0);               
+        }
+    }
+}
 #clients{
     .box{
         background-color:#f3f8fc;

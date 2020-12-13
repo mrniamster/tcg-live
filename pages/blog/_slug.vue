@@ -1,8 +1,9 @@
 <template>
   <div class="layoutx">
         <bannerComp
-      :img="article.img"
+      :img="article.thumbnail"
       :title="article.title"
+      :dim="true"
     />
     <!--Section: Content-->
     <section class="mx-md-5 dark-grey-text">
@@ -40,9 +41,15 @@
                 >
               </li>
             </ul>
-            <prev-next :prev="prev" :next="next" />
+           
           </div>
           <nuxt-content :document="article" />
+          <hr>
+          <div class="read-more">
+                <h1 class="p18h text-center" >RELATED STORIES</h1>
+              <prev-next :prev="prev" :next="next" />
+          </div>
+           
         </div>
         <!-- Grid column -->
       </div>
@@ -58,24 +65,34 @@
 export default {
   async asyncData({ $content, params }) {
     const article = await $content('articles', params.slug).fetch()
-    console.log(article,params)
     const [prev, next] = await $content('articles')
-      .only(['title', 'slug'])
       .sortBy('createdAt', 'asc')
       .surround(params.slug)
       .fetch()
+       console.log(prev)
     return { article, prev, next }
   },
   head() {
     return {
-      title: 'THE TCG IS LIVE',
+      title: this.article.title,
       meta: [
         // hid is used as unique identifier. Do not use `vmid` for it as it will not work
-        {
-          hid: 'description',
-          name: 'description',
-          content: 'This will be a short description for a tcg blog',
-        },
+
+        { charset: 'utf-8' },
+      { hid:'viewport',name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: this.article.description },
+       // Twitter Card
+       {hid: 'twitter:card',name: 'twitter:card', content: 'summary'},
+       {hid: 'twitter:title',name: 'twitter:title', content: this.article.title},
+       {hid: 'twitter:description',name: 'twitter:description', content: this.article.description},
+       // image must be an absolute path
+       {hid:'twitter:image',name: 'twitter:image', content:'/_nuxt/img/1e4ffe8-1440.png'},
+       // Facebook OpenGraph
+       {hid:'og:title',property: 'og:title', content: this.article.title},
+       {hid:'og:title',property: 'og:site_name', content: 'TCG'},
+       {hid:'og:type',property: 'og:type', content: 'website'},
+       {hid:'og:image',property: 'og:image', content: '/_nuxt/img/1e4ffe8-1440.png' },
+       {hid:'og:description',property: 'og:description', content: this.article.description}
       ],
       script:[{
         //src:'/head.js'
@@ -83,8 +100,10 @@ export default {
      link: [{ rel: 'stylesheet', href: '/assets/css/page/blog.css' }],
     }
   },
+  mounted(){
+   
+  }
 }
 </script>
-<style >
-
+<style  lang="scss" scoped>
 </style>

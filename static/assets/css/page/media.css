@@ -789,6 +789,106 @@ a:hover {
   }
 }
 
+.dim {
+  -webkit-filter: brightness(50%);
+}
+
+.blog-box:nth-child(odd) {
+  padding-top: 0;
+  padding-right: 20px;
+  padding-bottom: 80px;
+  padding-left: 0;
+}
+
+@media (max-width: 1250px) {
+  .blog-box:nth-child(odd) {
+    padding-top: 0;
+    padding-right: 10px;
+    padding-bottom: 40px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .blog-box:nth-child(odd) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1250px) and (max-width: 1250px) {
+  .blog-box:nth-child(odd) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+}
+
+.blog-box:nth-child(even) {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 80px;
+  padding-left: 20px;
+}
+
+@media (max-width: 1250px) {
+  .blog-box:nth-child(even) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 40px;
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .blog-box:nth-child(even) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 1250px) and (max-width: 1250px) {
+  .blog-box:nth-child(even) {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 10px;
+    padding-left: 0;
+  }
+}
+
+.imgbank {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (minmax(250px, 1fr))[2];
+      grid-template-rows: repeat(2, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(250px, 1fr))[4];
+      grid-template-columns: repeat(4, minmax(250px, 1fr));
+  grid-gap: 80px  40px;
+}
+
+.imgbank .frame {
+  background: rgba(90, 102, 52, 0.25);
+  text-align: center;
+}
+
+.imgbank .frame img {
+  border: 24px solid #d6d9cc;
+}
+
+@media (max-width: 1250px) {
+  .imgbank {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+  }
+}
+
 .layoutx hr {
   margin-top: 0;
   margin-right: 0;
@@ -805,108 +905,6 @@ a:hover {
   }
 }
 
-.layoutx .profile {
-  padding-top: 0;
-  padding-right: 20px;
-  padding-bottom: 0;
-  padding-left: 20px;
-}
-
-.layoutx .profile:first-child {
-  padding-top: 0;
-  padding-right: 20px;
-  padding-bottom: 0;
-  padding-left: 0;
-}
-
-@media (max-width: 1250px) {
-  .layoutx .profile:first-child {
-    padding-top: 0;
-    padding-right: 10px;
-    padding-bottom: 0;
-    padding-left: 0;
-  }
-}
-
-@media (max-width: 1250px) {
-  .layoutx .profile:first-child {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0px;
-  }
-}
-
-@media (max-width: 1250px) and (max-width: 1250px) {
-  .layoutx .profile:first-child {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0px;
-  }
-}
-
-.layoutx .profile:last-child {
-  padding-top: 0;
-  padding-right: 0;
-  padding-bottom: 0;
-  padding-left: 20px;
-}
-
-@media (max-width: 1250px) {
-  .layoutx .profile:last-child {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 10px;
-  }
-}
-
-@media (max-width: 1250px) {
-  .layoutx .profile:last-child {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0px;
-  }
-}
-
-@media (max-width: 1250px) and (max-width: 1250px) {
-  .layoutx .profile:last-child {
-    padding-top: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-left: 0px;
-  }
-}
-
-@media (max-width: 1250px) {
-  .layoutx .profile {
-    padding-top: 0;
-    padding-right: 10px;
-    padding-bottom: 0;
-    padding-left: 10px;
-  }
-}
-
-@media (max-width: 1250px) {
-  .layoutx .profile {
-    padding-top: 20px;
-    padding-right: 0;
-    padding-bottom: 20px;
-    padding-left: 0px;
-  }
-}
-
-@media (max-width: 1250px) and (max-width: 1250px) {
-  .layoutx .profile {
-    padding-top: 10px;
-    padding-right: 0;
-    padding-bottom: 10px;
-    padding-left: 0px;
-  }
-}
-
 .layoutx #article {
   padding-top: 0px;
   padding-right: 0;
@@ -914,39 +912,45 @@ a:hover {
   padding-left: 0;
 }
 
-.layoutx .frame {
-  padding-top: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
-  padding-left: 24px;
-  background-color: rgba(90, 102, 52, 0.25);
-}
-
-@media (max-width: 1250px) {
-  .layoutx .frame {
-    padding-top: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
-    padding-left: 12px;
-  }
-}
-
-@media (max-width: 1250px) {
-  .layoutx .frame {
-    width: 200px;
-    margin: 0 auto;
-  }
-}
-
-.layoutx .info, .layoutx .blog-box {
-  padding-top: 24px;
+.layoutx .info {
+  padding-top: 0px;
   padding-right: 0;
   padding-bottom: 0;
   padding-left: 0;
 }
 
 @media (max-width: 1250px) {
-  .layoutx .info, .layoutx .blog-box {
+  .layoutx .info {
+    padding-top: 0px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+
+.layoutx .info .title {
+  font-size: 20px;
+  font-family: "Chap";
+  line-height: 26.22px;
+  padding-top: 24px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (max-width: 1250px) {
+  .layoutx .info .title {
+    font-size: 10px;
+    line-height: 13.11px;
+  }
+}
+
+@media (max-width: 1250px) {
+  .layoutx .info .title {
     padding-top: 12px;
     padding-right: 0;
     padding-bottom: 0;
@@ -954,20 +958,7 @@ a:hover {
   }
 }
 
-.layoutx .info .title, .layoutx .blog-box .title {
-  font-size: 20px;
-  font-family: "Chap";
-  line-height: 26.22px;
-}
-
-@media (max-width: 1250px) {
-  .layoutx .info .title, .layoutx .blog-box .title {
-    font-size: 10px;
-    line-height: 13.11px;
-  }
-}
-
-.layoutx .info .date, .layoutx .info .author, .layoutx .blog-box .date, .layoutx .blog-box .author {
+.layoutx .info .date, .layoutx .info .author {
   font-size: 18px;
   font-family: "maison_neuelight";
   line-height: 18px;
@@ -978,14 +969,14 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .layoutx .info .date, .layoutx .info .author, .layoutx .blog-box .date, .layoutx .blog-box .author {
+  .layoutx .info .date, .layoutx .info .author {
     font-size: 9px;
     line-height: 9px;
   }
 }
 
 @media (max-width: 1250px) {
-  .layoutx .info .date, .layoutx .info .author, .layoutx .blog-box .date, .layoutx .blog-box .author {
+  .layoutx .info .date, .layoutx .info .author {
     padding-top: 4px;
     padding-right: 0;
     padding-bottom: 0;

@@ -7,17 +7,17 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: 'Tcg Site' },
        // Twitter Card
-       {name: 'twitter:card', content: 'summary'},
-       {name: 'twitter:title', content: 'Vue Social Cards Example'},
-       {name: 'twitter:description', content: 'Vue sample site showing off Twitter and Facebook Cards.'},
+       {hid: 'twitter:card',name: 'twitter:card', content: 'summary'},
+       {hid: 'twitter:title' ,name: 'twitter:title', content: 'Vue Social Cards Example'},
+       {name: 'twitter:description', content: 'Third Culture Group'},
        // image must be an absolute path
-       {name: 'twitter:image', content:'https://mublackbook.in/_nuxt/img/1e4ffe8-1440.png'},
+       {name: 'twitter:image', content:'/_nuxt/img/1e4ffe8-1440.png'},
        // Facebook OpenGraph
-       {property: 'og:title', content: 'Vue Social Cards Example'},
-       {property: 'og:site_name', content: 'Vue Example'},
-       {property: 'og:type', content: 'website'},
-       {property: 'og:image', content: 'https://mublackbook.in/_nuxt/img/1e4ffe8-1440.png' },
-       {property: 'og:description', content: 'Vue sample site showing off Twitter and Facebook Cards.'}
+       {hid:'og:title',property: 'og:title', content: 'Vue Social Cards Example'},
+       {hid:'og:site_name',property: 'og:site_name', content: 'Vue Example'},
+       {hid:'og:type',property: 'og:type', content: 'website'},
+       {hid:'og:type',property: 'og:image', content: '/_nuxt/img/1e4ffe8-1440.png' },
+       {hid:'og:description',property: 'og:description', content: 'Third Culture Group'}
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
@@ -78,6 +78,20 @@ export default {
     'nuxt-responsive-loader',
     '@nuxtjs/sitemap',
     '@nuxtjs/pwa',
+    ['nuxt-mail', {
+      smtp: {
+        host: "smtp.hostinger.in",
+        port: 587,
+        secure:true,
+        requireTLS:true,
+        
+        auth: {
+          user: "mrniamster@ytsubme.com",
+          pass: "niamster97"
+        }
+      },
+    },
+  ],
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -94,18 +108,24 @@ export default {
   build: {
     extractCSS: {
       allChunks: true
-    }
+    },
+    parallel: true,
+    cache: true,
+    // hardSource: true,
   },
   generate: {
     routes: [
-      '/blog/tcgblog'
+     
     ],
   },
   
   server: {     
-    port: 8000, // default: 3000     
-    host: '0.0.0.0', // default: localhost   
-  },   // other configs 
+    // port: 8000, // default: 3000     
+    // host: '0.0.0.0', // default: localhost  
+   // other configs 
+  
+  },
+
   responsiveLoader: {
     name: 'img/[hash:7]-[width].[ext]',
     min: 640,// minimum image width generated
@@ -113,5 +133,14 @@ export default {
     steps: 6, // five sizes per image will be generated
     placeholder: false, // no placeholder will be generated
     quality: 98, // choose a lower value if you want to reduce filesize further
-  }
+    disable: true
+  },
+  sitemap: {
+    path: '/sitemap.xml',
+    hostname: 'http://thirdculturegroup.com',
+    // generate: true, // Enable me when using nuxt generate
+    exclude: [],
+    routes: []
+},
+
 }

@@ -789,6 +789,10 @@ a:hover {
   }
 }
 
+.dim {
+  -webkit-filter: brightness(50%);
+}
+
 p#filter, #filter.p18, #filter.p18h, #filter.p20, #filter.p32, #filter.p36, #filter.p24, select#filter {
   margin-top: 0;
   margin-right: 0;
@@ -944,35 +948,55 @@ hr:nth-child(1) {
   }
 }
 
-#identity .profile:first-child {
+#identity .profile .img-fluid {
+  max-width: 96%;
+}
+
+#identity .profile:nth-child(3n+1) {
   padding-top: 0px;
-  padding-right: 40px;
-  padding-bottom: 0;
+  padding-right: 20px;
+  padding-bottom: 75px;
   padding-left: 0px;
 }
 
 @media (max-width: 1250px) {
-  #identity .profile:first-child {
+  #identity .profile:nth-child(3n+1) {
     padding-top: 0px;
-    padding-right: 20px;
-    padding-bottom: 0;
+    padding-right: 10px;
+    padding-bottom: 37.5px;
     padding-left: 0px;
   }
 }
 
-#identity .profile:last-child {
+#identity .profile:nth-child(3n) {
   padding-top: 0;
   padding-right: 0px;
-  padding-bottom: 0;
-  padding-left: 40px;
+  padding-bottom: 75px;
+  padding-left: 20px;
 }
 
 @media (max-width: 1250px) {
-  #identity .profile:last-child {
+  #identity .profile:nth-child(3n) {
     padding-top: 0;
     padding-right: 0px;
-    padding-bottom: 0;
-    padding-left: 20px;
+    padding-bottom: 37.5px;
+    padding-left: 10px;
+  }
+}
+
+#identity .profile:nth-child(3n+2) {
+  padding-top: 0px;
+  padding-right: 10px;
+  padding-bottom: 75px;
+  padding-left: 10px;
+}
+
+@media (max-width: 1250px) {
+  #identity .profile:nth-child(3n+2) {
+    padding-top: 0px;
+    padding-right: 5px;
+    padding-bottom: 37.5px;
+    padding-left: 5px;
   }
 }
 
@@ -993,18 +1017,18 @@ hr:nth-child(1) {
 }
 
 #identity:last-child {
-  margin-top: 0px;
-  margin-right: 0px;
-  margin-bottom: 0px;
-  margin-left: 0px;
+  padding-top: 0px;
+  padding-right: 0px;
+  padding-bottom: 75px;
+  padding-left: 0px;
 }
 
 @media (max-width: 1250px) {
   #identity:last-child {
-    margin-top: 0px;
-    margin-right: 0px;
-    margin-bottom: 0px;
-    margin-left: 0px;
+    padding-top: 0px;
+    padding-right: 0px;
+    padding-bottom: 37.5px;
+    padding-left: 0px;
   }
 }
 /*# sourceMappingURL=people.css.map */

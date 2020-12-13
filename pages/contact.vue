@@ -1,18 +1,18 @@
 <template>
   <div>
     <bannerComp
-      img="contact.png"
+      img="contact_test.png"
       title="Contact"
     />
     <div class="layoutx box1">
       <div class="layout300x ownbrands ">
-        <h4 class="p18h title">OWN BRANDS</h4>
-        <p class="p24">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat, euismod amet nullam faucibus morbi nunc ultrices.</p>
-        <p class="p24">Vulputate risus, blandit dictumst dolor pharetra. Facilisis interdum a quisque mattis.</p>
+        <h4 class="p18h title">REACH US</h4>
+        <p class="p24"> Write to us at <a href="mailto:info@thirdculturegroup.com">info@thirdculturegroup.com</a></p>
+        <p class="p24"></p>
       </div>
     </div>
 
-        <div class="values">   
+        <div class="d-none values">   
         <p class="p18" style="padding-top:0px;" >OPEN POSITIONS</p>
          <div v-for="i in 4">
         <hr>
@@ -31,13 +31,13 @@
         </div>
     </div>
     <div class="layoutx investor">
-      <div class="layout300x">
+      <div class="d-none layout300x">
 <h4 class="p18h">INVESTOR RELATIONS</h4>
 <p class="p24">Odio vulputate donec vitae, nullam eros, nisl feugiat. Non bibendum duis nunc facilisis massa feugiat viverra elit facilisis. Mi mi euismod sit suspendisse. Aliquam pulvinar etiam posuere leo gravida viverra commodo gravida orci.</p>
       <p class="p24">Vulputate risus, blandit dictumst dolor pharetra. Facilisis interdum a quisque mattis. For more iformation contact <a style="color:#5A6634" href="mailto:luka.fabris@tcg.com">luka.fabris@tcg.com</a></p>
       </div>
 
-     <div class="documents">
+     <div class="d-none documents">
           <p class="p18h">RELAED DOCUMENTS</p>
           <hr>
           <div class="row" >
@@ -56,7 +56,7 @@
 
      </div>
   </div>
-  <div id="box2" class="layoutx">
+  <div id="box2" class="d-none layoutx">
         <div class="layout300x relations">
        <p class="p18h">PRESS RELATIONS</p>
        <p class="p24">Odio vulputate donec vitae, nullam eros, nisl feugiat. Non bibendum duis nunc facilisis massa feugiat viverra elit facilisis. Mi mi euismod sit suspendisse. Aliquam pulvinar etiam posuere leo gravida viverra commodo gravida orci.</p>

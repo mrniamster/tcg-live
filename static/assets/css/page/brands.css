@@ -789,6 +789,10 @@ a:hover {
   }
 }
 
+.dim {
+  -webkit-filter: brightness(50%);
+}
+
 .thead p:last-child, .thead .p18:last-child, .thead .p18h:last-child, .thead .p20:last-child, .thead .p32:last-child, .thead .p36:last-child, .thead .p24:last-child, .thead select:last-child {
   padding-top: 16px;
   padding-right: 0;
@@ -805,7 +809,7 @@ a:hover {
   }
 }
 
-.box1 .row:not(:first-child):not(:last-child) {
+#box1 .row:not(:first-child):not(:last-child), #box2 .row:not(:first-child):not(:last-child) {
   margin-top: 120px;
   margin-right: 0;
   margin-bottom: 120px;
@@ -813,7 +817,7 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .box1 .row:not(:first-child):not(:last-child) {
+  #box1 .row:not(:first-child):not(:last-child), #box2 .row:not(:first-child):not(:last-child) {
     margin-top: 60px;
     margin-right: 0;
     margin-bottom: 60px;
@@ -821,7 +825,7 @@ a:hover {
   }
 }
 
-.box1 .row .col-md-6:first-child {
+#box1 .row .col-md-6:first-child, #box2 .row .col-md-6:first-child {
   padding-top: 0;
   padding-right: 20px;
   padding-bottom: 0;
@@ -829,7 +833,7 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .box1 .row .col-md-6:first-child {
+  #box1 .row .col-md-6:first-child, #box2 .row .col-md-6:first-child {
     padding-top: 0;
     padding-right: 10px;
     padding-bottom: 0;
@@ -837,7 +841,7 @@ a:hover {
   }
 }
 
-.box1 .row .col-md-6:last-child {
+#box1 .row .col-md-6:last-child, #box2 .row .col-md-6:last-child {
   padding-top: 0;
   padding-right: 0;
   padding-bottom: 0;
@@ -845,7 +849,7 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .box1 .row .col-md-6:last-child {
+  #box1 .row .col-md-6:last-child, #box2 .row .col-md-6:last-child {
     padding-top: 0;
     padding-right: 0;
     padding-bottom: 0;
@@ -853,7 +857,7 @@ a:hover {
   }
 }
 
-.box1 .row .p18, .box1 .row .p18h {
+#box1 .row .p18, #box1 .row .p18h, #box2 .row .p18, #box2 .row .p18h {
   padding-top: 18px;
   padding-right: 0;
   padding-bottom: 0;
@@ -861,7 +865,7 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .box1 .row .p18, .box1 .row .p18h {
+  #box1 .row .p18, #box1 .row .p18h, #box2 .row .p18, #box2 .row .p18h {
     padding-top: 9px;
     padding-right: 0;
     padding-bottom: 0;
@@ -869,7 +873,7 @@ a:hover {
   }
 }
 
-.box1 .row button {
+#box1 .row a, #box2 .row a {
   margin-top: 32px;
   margin-right: 0;
   margin-bottom: 0;
@@ -877,7 +881,7 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .box1 .row button {
+  #box1 .row a, #box2 .row a {
     margin-top: 16px;
     margin-right: 0;
     margin-bottom: 0;

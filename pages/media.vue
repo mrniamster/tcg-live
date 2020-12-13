@@ -1,11 +1,11 @@
 <template>
   <div>
     <bannerComp
-      img="media.png"
+      img="media_test.png"
       title="Media"
     />
   <div class="layoutx">
-    <div class="press">
+    <div class="d-none press">
     <p class="p18h">PRESS SAID</p>
     <hr>
      <div class="row" >
@@ -26,12 +26,12 @@
      <div class="blog">
          <p class="p18h">BLOG</p>
           <hr>
-          <div class="row" >
-            <div id="article" class="d-md-flex flex-nowarp  justify-content-around box" v-for="i in 3" >
-          <div v-for="i in 2" class="blog-box profile">
-               <nuxt-link to="/blog/tcgblog"><img :srcset="require('~/assets/img/media/aman.png').srcSet"></nuxt-link>
-               <p class="title">Several word long title of example article</p>
-               <p class="author">Writers Name</p>
+          <div class="d-flex flex-warp  justify-content-around" >
+            <div id="article" class="row info"  >
+          <div v-for="blog in articles" class="col-md-6 blog-box profile">
+               <nuxt-link :to="'/blog/'+blog.slug"><img :srcset="require('~/assets/img/'+blog.thumbnail).srcSet"></nuxt-link>
+               <p class="title">{{blog.description}}</p>
+               <p class="author">{{blog.author}}</p>
             </div>
 
             </div>
@@ -41,19 +41,18 @@
      <div class="image-bank">
           <p class="p18h">IMAGE BANK</p>
           <hr>
-          <div class="row" >
-       <div id="article" class="d-md-flex flex-nowarp  justify-content-around box" v-for="i in 3">
-       <div class="profile" v-for="i in 4">
-         <div class="frame">
-         <img :srcset="require('~/assets/img/media/article.png').srcSet">
-        </div>
-        <div class="info">
-          <p class="title">Image Description</p>
-          <a href="/_nuxt/img/ce11692-640.png" style="cursor:pointer;color:#5A6634" class="date text-decoration-none" download><span style="display: inline-grid;"><img src="/assets/img/download.svg"></span> Download</a>
-        </div>
-       </div>
-       </div>
-     </div>
+            <div class="imgbank"  >
+              <div   class="img-box" v-for="logo in logos[0].body" >    
+              <div class="frame">
+              <!-- <img :srcset="require('~/assets/img/media/article.png').srcSet"> -->
+              <img class="img-fluid" :src="logo.thumbnail" >
+              </div>
+              <div class="info">
+              <p class="title">{{logo.title}}</p>
+              <a target="_blank" :href="logo.dl" style="cursor:pointer;color:#5A6634" class="date text-decoration-none" download><span style="display: inline-grid;"><img src="/assets/img/download.svg"></span> Download</a>
+              </div>
+              </div>
+            </div>
 
      </div>
   </div>
@@ -61,11 +60,19 @@
 </template>
 
 <script>
+
 export default {
+  async asyncData({$content}){
+    let articles = await $content('articles').sortBy('createdAt','desc').fetch();
+    let logos = await $content('api/media').sortBy('updatedAt').fetch();
+   //let articles = await $axios.$get('https://zeropercent.shop/wp-json/wp/v2/posts')
+    return {articles,logos}
+  },
   watch: {},
   head: {
     link: [{ rel: 'stylesheet', href: '/assets/css/page/media.css' }],
   },
+  mounted(){console.log(this.articles)}
 }
 </script>
 

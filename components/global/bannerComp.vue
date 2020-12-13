@@ -1,6 +1,6 @@
 <template>
   <div class="bannerComp" :style="height">
-    <img :srcset="require('~/assets/img/'+img).srcSet" class="img-fluid" />
+    <img :class="{dim : dim}" :srcset="require('~/assets/img/'+img).srcSet" class="img-fluid" />
     <div class="gallery-text">
     <h1>{{title}}</h1>
     </div>
@@ -10,10 +10,14 @@
 <script>
 export default {
  
-  props: ['title','img','height'],
+  props: ['title','img','height','dim'],
 
 }
   
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.dim{
+  -webkit-filter: brightness(50%);
+}
+</style>

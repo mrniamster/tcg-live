@@ -11,10 +11,10 @@
             <img  :srcset="require('~/assets/img/people/people_modal.png').srcSet" alt="">
           </div>
           <div class="modal-info">
-            <p class="name">Name Example</p>
-            <p class="job-title">Imaginary Title</p>
+            <p class="name">{{Name}}</p>
+            <p class="job-title">{{Job_Title}}</p>
             <p class="contact">+350 00 0000 0000</p>
-            <p class="email">firstname.lastname@tcg.com</p>
+            <p class="email">{{Email}}</p>
             <p class="bio">
               Ornare pellentesque sollicitudin id sapien sed iaculis. Risus leo, neque, adipiscing sed. Vulputate sagittis, amet, rhoncus phasellus habitasse. Sagittis, sagittis non ut nisl sagittis volutpat donec ut.
             </p>
@@ -34,7 +34,8 @@
 
 <script>
     export default {
-        
+          props:['Name','Email','Job_Title']
+       
     }
 </script>
 

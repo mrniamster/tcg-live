@@ -789,6 +789,10 @@ a:hover {
   }
 }
 
+.dim {
+  -webkit-filter: brightness(50%);
+}
+
 .content p, .content .p18, .content .p18h, .content .p20, .content .p32, .content .p36, .content .p24, .content select {
   padding-bottom: 30px;
 }

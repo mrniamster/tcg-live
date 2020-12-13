@@ -1,27 +1,28 @@
 <template>
   <div>
     <bannerComp
-      img="brands.png"
+      img="brands_test.png"
       title="Our brands"
     />
     <div class="layoutx-300 thead">
       <p class="p18h">OWN BRANDS</p>
       <p class="p24">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat, euismod amet nullam faucibus morbi nunc ultrices.
+       If you’re looking for leading brands, you’re in luck.
       </p>
       <p class="p24">
-        Vulputate risus, blandit dictumst dolor pharetra. Facilisis interdum a quisque mattis.
+        What’s more, we’ll be constantly updating our range to ensure we have the most exclusive portfolio of premium products on the planet.
       </p>
     </div>
-   <div class="layoutx box1">
-     <div class="row" v-for="i in 4">
+   <div id="box2" class="layoutx box2">
+    <div class="row"></div> <!---todo remove if the array is >2 -->
+     <div class="row" v-for="brand in brands[0].body">
        <div class="col-md-6">
-         <img :srcset="require('~/assets/img/brands/brandbox.png').srcSet" alt="" class="img-fluid">
+         <img :srcset="require('~/assets/img/brands/'+brand.brand_img).srcSet" alt="" class="img-fluid">
        </div>
        <div class="col-md-6">
-         <p class="p36">VEEN Ayurveda Shots</p>
-         <p class="p18">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</p>
-        <button class="btn-primary">Check out on LinkedIn</button>
+         <p class="p36">{{brand.brand_name}}</p>
+         <p class="p18" >{{brand.brand_info}}</p>
+        <a :href="brand.brand_link" class="btn-primary">Visit Website</a>
        </div>
      </div>
    </div>
@@ -31,15 +32,16 @@
        Third Culture Group acts as an alliance of brands and distributors focused on mindful consumption. The Alliance brand and TCG are the back bone to a multi-market, multi-brand sales and distribution engine.
       </p>
    </div>
-   <div class="layoutx box1 bg-pri-color">
-          <div class="row" v-for="i in 1">
+   <div id="box1" class="layoutx box1 bg-pri-color">
+   <div class="row"></div> <!---todo remove if the array is >2 -->
+          <div class="row" v-for="alibrand in brands[1].body">
        <div class="col-md-6">
-         <img :srcset="require('~/assets/img/brands/ish.png').srcSet" alt="" class="img-fluid">
+         <img :srcset="require('~/assets/img/brands/'+alibrand.brand_img).srcSet" alt="" class="img-fluid">
        </div>
        <div class="col-md-6">
-         <p class="p36">ISH Spirits</p>
-         <p class="p18">Based Copenhagen, Denmark, ISH Spirits were created by Morten Sørensen as part of his 100-day alcohol-free challenge. ISH is this alternative for the mindful drinker - the athlete, the pregnant woman, or the designated driver. It’s for those who can tear up the dance floor sober, and for those who simply want to wake up with a clear head on a Sunday morning. Realizing people craved the same familiar flavours, ISH was created, so that we can all still enjoy our favourite cocktails with no-and-low-alcohol, for any occasion, and most importantly – without compromise.</p>
-        <button class="btn-primary">Check out on LinkedIn</button>
+         <p class="p36">{{alibrand.brand_name}}</p>
+         <p class="p18">{{alibrand.brand_info}}</p>
+        <a  :href="alibrand.brand_link" class="btn-primary">Check out on LinkedIn</a>
        </div>
      </div>
    </div>
@@ -48,11 +50,18 @@
 
 <script>
 export default {
-  watch: {},
+  async asyncData({$content}){
+    const brands = await $content('api/brand').fetch();
+    const alibrands=await $content('api/brand/TCG_Ali-Brand_List',{text:true}).fetch();    
+    return {brands,alibrands }
+  },
   head: {
     link: [{ rel: 'stylesheet', href: '/assets/css/page/brands.css' }],
   },
+  mounted(){
+    console.log(this.brands)
+  }
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss"></style>

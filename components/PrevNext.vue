@@ -1,21 +1,28 @@
 <template>
-  <div class="flex justify-between">
+  <div class="d-flex justify-content-between">
+    <div v-if="prev" class="prev">
+      
+      <img  width="100px" style="display:block" :srcset="require('~/assets/img/'+prev.thumbnail).srcSet"  alt="">
     <NuxtLink
-      v-if="prev"
+      
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
-      class="text-primary font-bold"
+      class="font-bold p18"
     >
       {{ prev.title }}
     </NuxtLink>
-    <span v-else>&nbsp;</span>
+    
+    </div>
+    <div v-if="next" class="next">
+        <img width="100px" style="display:block" :srcset="require('~/assets/img/'+next.thumbnail).srcSet"  alt="">
     <NuxtLink
-      v-if="next"
+      
       :to="{ name: 'blog-slug', params: { slug: next.slug } }"
-      class="font-bold"
+      class="font-bold p18"
     >
       {{ next.title }}
     </NuxtLink>
-    <span v-else>&nbsp;</span>
+  
+    </div>
   </div>
 </template>
 

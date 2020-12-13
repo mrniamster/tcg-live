@@ -9,13 +9,14 @@
         of small and mid sized like-minded food and beverage brands and
         distributors to promote the mindful lifestyle.
       </p>
-      <a class="btn-primary">Read more about us</a>
+   
+      <nuxt-link to="/about" class="btn-primary" >Read more about us</nuxt-link>
     </div>
     <div class="flex-item" id="spacer">
 
     </div>
-    <div class="flex-item">
-      <img :srcset="require('~/assets/img/textimg.png').srcSet" class="img-fluid" />
+    <div  v-lazy-container="{ selector: 'img' }"  class="flex-item">
+      <img :data-srcset="require('~/assets/img/textimg.png').srcSet" class="img-fluid" />
     </div>
   </div>
   </div>

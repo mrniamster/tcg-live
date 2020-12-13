@@ -789,6 +789,26 @@ a:hover {
   }
 }
 
+.dim {
+  -webkit-filter: brightness(50%);
+}
+
+.thead p:last-child, .thead .p18:last-child, .thead .p18h:last-child, .thead .p20:last-child, .thead .p32:last-child, .thead .p36:last-child, .thead .p24:last-child, .thead select:last-child {
+  padding-top: 16px;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+
+@media (max-width: 1250px) {
+  .thead p:last-child, .thead .p18:last-child, .thead .p18h:last-child, .thead .p20:last-child, .thead .p32:last-child, .thead .p36:last-child, .thead .p24:last-child, .thead select:last-child {
+    padding-top: 8px;
+    padding-right: 0;
+    padding-bottom: 0;
+    padding-left: 0;
+  }
+}
+
 #clients .box {
   background-color: #f3f8fc;
 }

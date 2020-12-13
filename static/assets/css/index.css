@@ -789,6 +789,10 @@ a:hover {
   }
 }
 
+.dim {
+  -webkit-filter: brightness(50%);
+}
+
 #ourpeople {
   margin-top: 0;
   margin-right: 0;
@@ -869,81 +873,17 @@ a:hover {
   }
 }
 
-@media (max-width: 1250px) {
-  .ourbrands .row .col-md-3 {
-    text-align: center;
-  }
+.ourbrands .imgbank {
+  display: -ms-grid;
+  display: grid;
+  max-width: 1440px;
+  margin: 0 auto;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 80px  40px;
 }
 
-.ourbrands .row:not(:nth-of-type(1)) {
-  margin-top: 80px;
-  margin-right: 0;
-  margin-bottom: 80px;
-  margin-left: 0;
-}
-
-@media (max-width: 1250px) {
-  .ourbrands .row:not(:nth-of-type(1)) {
-    margin-top: 40px;
-    margin-right: 0;
-    margin-bottom: 40px;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 1250px) {
-  .ourbrands .row:not(:nth-of-type(1)) {
-    margin-top: 40px;
-    margin-right: 0;
-    margin-bottom: 40px;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 1250px) and (max-width: 1250px) {
-  .ourbrands .row:not(:nth-of-type(1)) {
-    margin-top: 20px;
-    margin-right: 0;
-    margin-bottom: 20px;
-    margin-left: 0;
-  }
-}
-
-.ourbrands .row:last-of-type {
-  margin-top: 80px;
-  margin-right: 0;
-  margin-bottom: 32px;
-  margin-left: 0;
-}
-
-@media (max-width: 1250px) {
-  .ourbrands .row:last-of-type {
-    margin-top: 40px;
-    margin-right: 0;
-    margin-bottom: 16px;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 1250px) {
-  .ourbrands .row:last-of-type {
-    margin-top: 40px;
-    margin-right: 0;
-    margin-bottom: 16px;
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 1250px) and (max-width: 1250px) {
-  .ourbrands .row:last-of-type {
-    margin-top: 20px;
-    margin-right: 0;
-    margin-bottom: 8px;
-    margin-left: 0;
-  }
-}
-
-.ourbrands .row .p20 {
+.ourbrands .imgbank .p20 {
   font-family: 'Chap';
   padding-top: 20px;
   padding-right: 0;
@@ -952,11 +892,18 @@ a:hover {
 }
 
 @media (max-width: 1250px) {
-  .ourbrands .row .p20 {
+  .ourbrands .imgbank .p20 {
     padding-top: 10px;
     padding-right: 0;
     padding-bottom: 10px;
     padding-left: 0;
+  }
+}
+
+@media (max-width: 1250px) {
+  .ourbrands .imgbank {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
   }
 }
 

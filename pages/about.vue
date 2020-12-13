@@ -1,7 +1,7 @@
 <template>
   <div>
     <bannerComp
-      img="about.png"
+      img="about_test.png"
       title="About us"
     />
     <div class="content">
@@ -13,7 +13,7 @@
 <p class="p24">We want to help consumers drink less alcohol and animal products, eat less meat and more organic, consume less sugar and consume healthier in order to be happier. We own, produce, represent, market, distribute and sell leading brands in the categories of 0% alcohol, 0% dairy, 0% pesticides, 0% sugar, 0% microplastic, fine water and 0% meat.</p>
     <img id="content_img" :srcset="require('~/assets/img/about/about_img.png').srcSet" alt="about image" class="img-fluid">
     </div>
-    <div class="values">   
+    <div class="d-none values ">   
         <p class="p18">OUR VALUES</p>
          <div v-for="i in 4">
         <hr>
@@ -30,7 +30,31 @@
     </div>
     <div class="company layout">
         <p class="p18h">OUR COMPANY STRUCTURE</p>
-        <img :srcset="require('~/assets/img/about/structure.jpg').srcSet" alt="" class="img-fluid">
+        <!-- <img :srcset="require('~/assets/img/about/structure.jpg').srcSet" alt="" class="img-fluid"> -->
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" :srcset="require('~/assets/img/about/1.jpg').srcSet"  alt="First slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" :srcset="require('~/assets/img/about/2.jpg').srcSet" alt="Second slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" :srcset="require('~/assets/img/about/3.jpg').srcSet"  alt="Third slide">
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" :srcset="require('~/assets/img/about/4.jpg').srcSet"  alt="Third slide">
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
         <div id="footext" class="" >
         <p class="p24">
             Third Culture Group (formerly VEEN Waters Finland Oy) got its avatar in July 2020 and has been developed with the idea of creating an alliance of small and mid sized like-minded food and beverage brands and distributors to promote the mindful lifestyle.
