@@ -1,4 +1,4 @@
-# tcg
+# TCG Website
 
 ## Build Setup
 
