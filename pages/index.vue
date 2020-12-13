@@ -14,7 +14,7 @@
     <div v-lazy-container="{ selector: 'img' }" class="clients">
       <p class="p18">SOME OF OUR CLIENTS</p>
       <img
-        :data-srcset="require('~/assets/img/logos.png').srcSet"
+        :srcset="require('~/assets/img/logos.png').srcSet"
         alt=""
         class="img-fluid"
       />
@@ -26,7 +26,7 @@
       <div class="imgbank" id="up">
         <div v-lazy-container="{ selector: 'img' }" v-for="brand in brands.body" class="">
           <img
-            :data-srcset="require('~/assets/img/brands/'+brand.brand_910).srcSet"
+            :srcset="require('~/assets/img/brands/'+brand.brand_910).srcSet"
             alt=""
             class="img-fluid"
           />
