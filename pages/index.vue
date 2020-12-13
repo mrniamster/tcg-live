@@ -45,7 +45,6 @@ export default {
     // const article = await $content('api/brand', params.slug).only(['id','brand']).fetch()
     // const article = await $content('api/brand', params.slug).sortBy('id','desc').fetch()
      const brands = await $content('api/brand/brands', params.slug).sortBy('id','desc').fetch()
-    console.log(brands,params)
     return { brands}
   },
   watch: {},
@@ -54,7 +53,7 @@ export default {
   },
 created(){
    //this.$axios.get('https://api.storyblok.com/v1/cdn/stories/posts/my-third-post?token=ask9soUkv02QqbZgmZdeDAtt').then((r)=>console.log(r.data));
-  console.log(this.brands);
+
 }
 }
 </script>
