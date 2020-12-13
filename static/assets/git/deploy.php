@@ -15,5 +15,5 @@ if (!$ssh->login('u50826507', '0Shop-123')) {
     exit('Login Failed');
 }
 
-echo $ssh->exec('cd thirdculturegroup.com && ls');
+echo $ssh->exec('cd thirdculturegroup.com && git pull origin main');
 ?>
