@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nuxt",
-    "build": "nuxt build && purgecss --css assets/css/bootstrap.min.css --content pages/**/*.vue /**/*.vue  --output static/assets/css/",
+    "build": "nuxt build ",
     "start": "nuxt start",
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vuue --ignore-path .gitignore .",
