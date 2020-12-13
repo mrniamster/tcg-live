@@ -1,0 +1,53 @@
+@import '../_main.scss','../mixin.scss';
+
+.content{
+    p{
+        padding-bottom: 30px;
+        &:last-of-type(){
+            padding-bottom: 0px;
+        }
+    }
+    #content_img{
+    @include margin(130px,0,0,0);
+}
+}
+
+.values{
+    background-color: #f3f8fc;
+    padding: 88px 80px;
+    sup{
+        font-family:'maison_mono';
+        color: #AAAAAA;
+       @include padding(0,24px,0,0);
+    }
+    .row{
+        padding: 0px;
+        margin: 0px;
+        @include margin(0,0,88px,0);   
+    }
+    hr{
+        margin: 32px 0;      
+        @include bp(md){margin: 16px 0;}
+
+    }
+    .p18:not(:first-of-type){
+        @include padding(31.5px,0,0,0)
+    }
+    
+}
+.company{
+    @include margin(128px,0,0,0);
+    .p18{
+font-family:'maison_neuelight';
+    }
+    .layoutx-300{
+        @include padding(120px,220px,120px,220px)
+    }
+}
+
+#footext{
+    @include padding(120px,220px,120px,220px);
+    @include bp(md){
+        @include padding(60px,45px,60px,45px); 
+    }
+}

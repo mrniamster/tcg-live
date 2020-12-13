@@ -1,0 +1,48 @@
+@import '../_main.scss','../mixin.scss';
+h1{@include p('Chap' ,72px,100%);}
+h2{@extend .p18h;}
+h3{@extend .p36;}
+h4{@extend .p18;}
+h5{@extend .p20;}
+p{@extend .p24;
+    @include padding(0,0,30px,0);
+    @include bp(md){
+        @include padding(0,0,15px,0);
+    }
+}
+a{@extend .p24;}
+
+.nuxt-content{
+    h2{
+        &:not(:first-of-type){
+            // background-color: red;
+            @include padding(16px,0,32px,0)
+        }
+    }
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+  }
+  blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  blockquote p {
+    display: inline;
+  }
+
+.bannerComp{
+    @include padding(0,0,30px,0);
+    @include bp(md){
+        @include padding(0,0,15px,0);
+    }
+}

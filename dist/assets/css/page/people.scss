@@ -1,0 +1,47 @@
+@import '../_main.scss','../mixin.scss';
+
+p#filter{ @include  margin(0,0,94px,0);}
+hr:nth-child(1){@include margin(0,0,32px,0);}
+.location{
+    @include margin(40px,0,0,0);
+}
+#identity { 
+     @include padding(0px,0,75px,0);
+    .profile{
+        .info{
+            @include padding(24px,0,0,0);
+            p{
+            &:first-child{@include p(20px,$sec-font,26px);}
+            &:not(:first-child):not(:last-child){@include padding(8px,0,24px,0);@include p(18px);}    
+            &:last-child{@include p(14px,$pri-font);letter-spacing: 0.05em;
+            }
+            }
+            .plus img{@include padding(0,8px,0,0);@include bp(md){width: 10px;}}
+        }
+        .img-fluid{
+            max-width:96%;
+        }
+        &:nth-child(3n+1){
+            @include padding(0px,20px,75px,0px); 
+            //float: left;max-width: 290px;
+        }
+        &:nth-child(3n){
+           @include padding(0,0px,75px,20px);
+           //float: right;max-width: 290px; 
+        }
+        &:nth-child(3n+2){
+            //background-color: red;
+            @include padding(0px,10px,75px,10px); 
+            //margin:0 auto;max-width: 290px;
+        }
+    }
+    &:first-child(){
+        @include padding (0px,0px,75px,0px);
+        //background-color: yellow;
+    }
+    &:last-child(){
+    //@include margin(0px,0px,0px,0px);
+   // background-color: blue;
+   @include padding (0px,0px,75px,0px);
+}
+}

@@ -1,0 +1,100 @@
+@import '../_main.scss','../mixin.scss','media.scss';
+a{
+    color: $pri-color;
+}
+.layoutx.box1{
+    .ownbrands {
+    p{
+        &:last-child{
+            @include padding(16px,0,0,0)
+        }
+    }
+
+    }
+
+}
+
+sup{
+    @include bp(md){
+display: flex
+      }
+}
+.layoutx div#article:last-child{
+    padding-bottom: 0px;
+}
+
+.values{
+    background-color: white;
+    padding: 0px 80px;
+    
+    sup{
+        font-family:'maison_mono';
+        color: #AAAAAA;
+       @include margin(0,32px,0,0);
+    }
+    .row{
+        padding: 0px;
+        margin: 0px;
+        @include margin(0,0,120px,0);
+       
+    }
+    hr{
+        margin: 32px 0;      
+        @include bp(md){margin: 16px 0;}
+
+    }
+    .p18{
+        @include padding(31.5px,0,0,0)
+    }
+    button{
+        @include margin(24px,0,0,0)
+    }
+    
+}
+.investor{
+    background-color: #f3f8fc;
+
+    .layout300x{
+        p{
+            &:last-child{
+                @include padding(16px,0,0,0);               
+            }
+        }
+    }
+    .documents{
+        @include padding(120px,0,0,0); 
+        a#download{
+            @include p(14px,$pri-font,14px);
+            }
+        
+ .frame{
+    @include bp(md){
+        width: 200px;margin: 0 auto;
+    }
+ }
+    }
+    .relations{
+        background-color: white;
+    }
+}
+
+#box2{
+    .releases{
+        @include padding(120px,0,0,0);
+        #card:nth-child(3):last-child{@include padding(80px,0,0,0)}
+    hr{
+        width: 250px;
+    }
+    .info{
+@include padding(0,0,0,0);
+.title{@include padding(0,0,10px,0);}
+a#download{@include p(14px,$pri-font,14px);}
+    }
+    }
+}
+
+#download > span > img  {
+    @include bp(md){
+         height: 1em;
+       }
+     }
