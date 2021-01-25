@@ -14,7 +14,7 @@
     <div v-lazy-container="{ selector: 'img' }" class="clients">
       <p class="p18">SOME OF OUR CLIENTS</p>
       <img
-        :srcset="require('~/assets/img/logos.png').srcSet"
+        :srcset="require('~/assets/img/logos2.png').srcSet"
         alt=""
         class="img-fluid"
       />

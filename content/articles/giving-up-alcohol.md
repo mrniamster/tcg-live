@@ -4,6 +4,7 @@ description: 'Every day, our immune system protects us from over 100,000,000 vir
 author: JOEL WILLANS
 img: media/p4/fruit.jpg
 thumbnail: media/p4/thumbnail.jpg
+oglink: 'https://zeropercent.shop/giving-up-alcohol-and-immune-system/'
 ---
 
 > *Every day, our immune system protects us from over 100,000,000 viruses and bacteria, and occasionally even kills [spontaneous cancer cells](https://www.medicalnewstoday.com/articles/272092) before they get a chance to mutate. As such a formidable fighter, it really deserves to be treated with care and respect. Forming simple sleeping and eating habits and getting regular exercise helps keep the champ fighting fit, but habits like excessive alcohol consumption can throw the immune system off its winning streak. See below how you can do wonders for your wellness simply by reducing your alcohol intake.*

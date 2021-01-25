@@ -912,6 +912,23 @@ a:hover {
   padding-left: 0;
 }
 
+.layoutx .categoires {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 120px;
+  padding-left: 0;
+  font-family: "Chap";
+}
+
+@media (max-width: 1250px) {
+  .layoutx .categoires {
+    padding-top: 0;
+    padding-right: 0;
+    padding-bottom: 60px;
+    padding-left: 0;
+  }
+}
+
 .layoutx .info {
   padding-top: 0px;
   padding-right: 0;

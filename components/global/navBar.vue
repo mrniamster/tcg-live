@@ -35,7 +35,7 @@
             <nuxt-link class="nav-link" to="/clients">Our Clients</nuxt-link>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/media">Our Media</nuxt-link>
+            <nuxt-link class="nav-link" to="/medias">Our Media</nuxt-link>
           </li>
           <li class="nav-item">
             <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>

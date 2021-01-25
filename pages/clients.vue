@@ -7,16 +7,26 @@
 
     <div class="layoutx" id="clients">
       <p class="p18h">SOME OF OUR ESTEEMED CLIENTS</p>
-      <div class="row" v-for="i in 4">
+      <div class="row">
         <div class="col-md-6">
-          <div class="box">
-          <img :srcset="require('~/assets/img/clients/nelly.png').srcSet"  class="img-fluid">
-          </div>
+
+          <img :srcset="require('~/assets/img/clients/hartwall.png').srcSet"  class="img-fluid">
+
+        </div>
+                <div class="col-md-6">
+
+          <img :srcset="require('~/assets/img/clients/oberoi.png').srcSet"  class="img-fluid">
+
+        </div>
+          <div class="col-md-6">
+
+          <img :srcset="require('~/assets/img/clients/itc.png').srcSet"  class="img-fluid">
+
         </div>
         <div class="col-md-6">
-          <div class="box">
-          <img :srcset="require('~/assets/img/clients/nelly.png').srcSet"  class="img-fluid">
-        </div>
+         
+          <img :srcset="require('~/assets/img/clients/westwing.png').srcSet"  class="img-fluid">
+
         </div>
       </div>
     </div>

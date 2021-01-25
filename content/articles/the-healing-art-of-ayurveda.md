@@ -4,6 +4,7 @@ description: 'As the ancient Indian science of life gains popularity outside of 
 author: KATJA PANTZAR
 img: media/p2/cover.jpg
 thumbnail: media/p2/thumbnail.jpg
+oglink: 'https://veenwaters.com/scenearticle/the-healing-art-of-ayurveda/'
 ---
 
 > *As the ancient Indian science of life gains popularity outside of Asia, we take a closer look at its health and wellbeing benefits.*

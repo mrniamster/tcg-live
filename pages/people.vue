@@ -4,6 +4,9 @@
      :Name="empdata.Name"
      :Email="empdata.Email"
      :Job_Title="empdata.Job_Title"
+     :Profileimg="empdata.Profileimg"
+     :Location="empdata.Location"
+     :Show="empdata.Show"
     />
     <bannerComp
       img="people_test.png"
@@ -44,12 +47,12 @@
            <div id="identity"  class="d-flex flex-warp  justify-content-around">
              <div  class="row">
                <div  v-for="emp in peoplelist" class="col-4 profile">
-               <img :srcset="require('~/assets/img/people/'+emp.Profile_img).srcSet" class="img-fluid "  alt="">
+               <img :srcset="require('~/assets/img/people/'+emp.Profileimg).srcSet" class="img-fluid "  alt="">
                <div class="info">
                <p id="">{{emp.Name}}</p>
                <p>{{emp.Job_Title}}</p>
               <div class="d-flex plus">
-                <a @click="empinfo(emp.Name,emp.Job_Title,emp.Email)" type="button" class="d-flex text-decoration-none" data-toggle="modal" data-target="#exampleModal"><img src="/assets/img/plus.svg" class="img-fluid" data-v-3b8704c8="" style=""><p data-v-3b8704c8="">MORE INFORMATION</p></a></div>
+                <a @click="empinfo(emp.Name,emp.Job_Title,emp.Email,emp.Profileimg,emp.Location,true)" type="button" class="d-flex text-decoration-none" data-toggle="modal" data-target="#exampleModal"><img src="/assets/img/plus.svg" class="img-fluid" data-v-3b8704c8="" style=""><p data-v-3b8704c8="">MORE INFORMATION</p></a></div>
                </div>                
                  </div>
              </div>
@@ -76,7 +79,7 @@ export default {
 // },
 data(){
   return{
-    empdata:{Email:"maie.smolkova@veenwaters.com",Job_Title:"",Name:"Maie Smolkova"},
+    empdata:{Email:"maie.smolkova@veenwaters.com",Job_Title:"",Name:"Maie Smolkova",Location:'',Profileimg:''},
     query:{aor:"",bu:"",loc:""},
     category:{
     aor:["Logistics","Quality Control","Production","Marketing","Sales","Management","Investor Relations","Admin","Zero Percent Partnerships","Finance","IT","Quality Control","PR"],
@@ -90,9 +93,13 @@ data(){
     link: [{ rel: 'stylesheet', href: '/assets/css/page/people.css' }],
   },
   methods:{
-    empinfo(Name,Email){
+    empinfo(Name,Job_Title,Email,Profileimg,Location,Show){
       this.empdata.Name=Name;
+      this.empdata.Job_Title=Job_Title;
       this.empdata.Email=Email;
+      this.empdata.Profileimg=Profileimg;
+      this.empdata.Location=Location;
+      this.empdata.Show=Show;
       //this.empdata='{ Name: 5,Email: 8}';
       //console.log(JSON.stringify({Name,Name,Email}));
       console.log(this.empdata)

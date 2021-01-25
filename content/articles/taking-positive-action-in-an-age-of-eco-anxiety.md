@@ -4,6 +4,7 @@ description: 'Reducing food waste and being plastic-savvy are key steps toward a
 author: KATJA PANTZAR
 img: media/p3/cover.jpg
 thumbnail: media/p3/thumbnail.jpg
+oglink: 'https://veenwaters.com/scenearticle/taking-positive-action-in-an-age-of-eco-anxiety/'
 ---
 
 > *Reducing food waste and being plastic-savvy are key steps toward a more sustainable lifestyle.*

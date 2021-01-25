@@ -16,20 +16,13 @@
 
     }
     .col-md-6{
-        &:first-child{
-        @include padding (0,20px,0,0);
-        @include bp(md){
-            @include padding (0,0,20px,0);
+        &:nth-child(odd){
+            @include padding (0,20px,40px,0);  
         }
-            }
-        &:last-child{
-                @include padding (0,0,0,20px);
-                @include bp(md){
-                    @include padding (20px,0,0px,0);
-                }
-            }
+        &:nth-child(even){
+            @include padding (0,0,40px,20px);  
+        }
     }
-
     >div{
         &:not(:nth-child(2)):not(:nth-child(5)) {
             @include padding (40px,0,40px,0);   

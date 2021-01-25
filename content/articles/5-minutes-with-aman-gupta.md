@@ -4,6 +4,7 @@ description: 'As summer of 2020 winds down, businesses are still focusing on dev
 author: KATJA PANTZAR
 img: media/p1/aman.png
 thumbnail: media/p1/aman.png
+oglink: 'https://veenwaters.com/scenearticle/5-minutes-with-aman-gupta/'
 ---
 
 > *As summer of 2020 winds down, businesses are still focusing on development and recovery strategies, finding ways to best navigate the unstable times caused by the COVID-19 pandemic. The same applies for restaurant and hotel suppliers and the entire supply chain. As a premium water producer catering to fine hotels and restaurants around the world, VEEN has been a part of this chain since 2007. Seeing its business brought to standstill in February 2020, the last six months have been a reflective time for the team. VEEN Scene caught up with Aman Gupta, Managing Director of VEEN, just as he & his team are beginning to see results of their change strategy, announcing the launch of Zero Percent Shop – a mindful lifestyle destination for online shopping, trade and wholesale distribution.*
