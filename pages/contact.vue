@@ -3,6 +3,7 @@
     <bannerComp
       img="contact_test.png"
       title="Contact"
+      dim="true"
     />
     <div class="layoutx box1">
       <div class="layout300x ownbrands ">

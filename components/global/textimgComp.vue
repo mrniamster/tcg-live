@@ -10,7 +10,7 @@
         distributors to promote the mindful lifestyle.
       </p>
    
-      <nuxt-link to="/about" class="btn-primary" >Read more about us</nuxt-link>
+      <a href="/about" class="btn-primary" >Read more about us</a>
     </div>
     <div class="flex-item" id="spacer">
 

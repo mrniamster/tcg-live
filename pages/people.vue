@@ -11,12 +11,21 @@
     <bannerComp
       img="people_test.png"
       title="Third Culture People"
+      dim="true"
+       subtitle="Lake Starnberg, or Starnberger See, is Germany's second-largest body of fresh water. Located in southern Bavaria, 25 kilometers southwest of Munich, it is also the first neighbor to Zero Percent head office. "
     />
  
-    <div class="layoutx">
-      <div class="row">
-        <div class="col-md-4 filter">
-          <p id="filter" class="p18">FILTER BY</p>
+   
+
+
+     <div class="layoutx">
+
+               <div class="row filter">
+          <div class="col-md-3">
+           <p id="filter" class="p18">FILTER BY</p>
+          </div>
+
+          <div class="col-md-3">
           <div class="category">
             <select v-model="query.aor">
                   <option value="" disabled selected>Area of Responsibility</option>
@@ -24,7 +33,9 @@
                <option value=""  selected>All</option>
             </select>            
           </div>
-            <div class="location">
+          </div>
+           <div class="col-md-3">
+            <div class="buizunit">
             <select v-model="query.bu">
                <option value="" disabled selected>Business Unit</option>
                             <option  v-for="bu in category.bu" >{{bu}}</option>
@@ -32,21 +43,25 @@
 
             </select>            
           </div>
-
-          <div class="aor location">
+          </div>
+         <div class="col-md-3">
+          <div class="aor loc">
             <select  v-model="query.loc">
                <option value="" disabled selected>Location</option>
               <option v-for="field in category.loc" >{{field}}</option>
                <option value=""  selected>All</option>
             </select>
           </div>
+         </div>
           
         </div>
-         <div class="col-md-8 showcase">
+
+      <div class="row">
+         <div class="col-md-12 showcase">
            <hr>
            <div id="identity"  class="d-flex flex-warp  justify-content-around">
              <div  class="row">
-               <div  v-for="emp in peoplelist" class="col-4 profile">
+               <div  v-for="emp in peoplelist" class="col-3 profile">
                <img :srcset="require('~/assets/img/people/'+emp.Profileimg).srcSet" class="img-fluid "  alt="">
                <div class="info">
                <p id="">{{emp.Name}}</p>

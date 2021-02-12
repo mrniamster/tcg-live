@@ -3,6 +3,9 @@
     <bannerComp
       img="media_test.png"
       title="Media"
+      dim="true"
+      subtitle="Bhutan, our second home, surprised the world in the 1970s by introducing the Gross National Happiness index to combat the popularly accepted method of measuring the nations’ success through economy.
+"
     />
   <div class="layoutx">
     <div class="d-none press">

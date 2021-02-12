@@ -133,7 +133,7 @@ export default {
     steps: 6, // five sizes per image will be generated
     placeholder: false, // no placeholder will be generated
     quality: 98, // choose a lower value if you want to reduce filesize further
-    // disable: true
+    disable: false
   },
   sitemap: {
     path: '/sitemap.xml',

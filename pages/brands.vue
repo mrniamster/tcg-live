@@ -3,14 +3,22 @@
     <bannerComp
       img="brands_test.png"
       title="Our brands"
+      dim="true"
     />
-    <div class="layoutx-300 thead">
+    <div class="layoutx-300 thead bg-pri-color">
       <p class="p18h">OWN BRANDS</p>
       <p class="p24">
-       If you’re looking for leading brands, you’re in luck.
+      We own and operate two spring water
+and natural mineral water bottling
+plants in Finnish Lapland and the
+Himalayan Kingdom of Bhutan. 
       </p>
       <p class="p24">
-        What’s more, we’ll be constantly updating our range to ensure we have the most exclusive portfolio of premium products on the planet.
+        We own the brands VEEN, Ayurveda
+Super Shots, Ayurveda Water, Nordic
+Mixers, Ayur Atmospherics, VEEN
+Plant-Based, <b>Ayurveda Gummi</b>
+to be launched in 2021.
       </p>
     </div>
    <div id="box2" class="layoutx box2">
@@ -32,7 +40,7 @@
        Third Culture Group acts as an alliance of brands and distributors focused on mindful consumption. The Alliance brand and TCG are the back bone to a multi-market, multi-brand sales and distribution engine.
       </p>
    </div>
-   <div id="box1" class="layoutx box1 bg-pri-color">
+   <div id="box1" class="layoutx box1 ">
    <div class="row"></div> <!---todo remove if the array is >2 -->
           <div class="row" v-for="alibrand in brands[1].body">
        <div class="col-md-6">
@@ -41,7 +49,7 @@
        <div class="col-md-6">
          <p class="p36">{{alibrand.brand_name}}</p>
          <p class="p18">{{alibrand.brand_info}}</p>
-        <a  :href="alibrand.brand_link" class="btn-primary">Check out on LinkedIn</a>
+        <a  :href="alibrand.brand_link" class="btn-primary">Visit Website</a>
        </div>
      </div>
    </div>

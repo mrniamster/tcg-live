@@ -4,12 +4,56 @@
     <bannerComp
       img="home_test.png"
       title="We believe a mindful lifestyle is the future of consumption"
+      dim="true"
     />
-    <textimgComp />
-    <div id="ourpeople" class="layout">
+    <!-- <textimgComp /> -->
+    <div class="row layoutx">
+      <p style="" class="p18h">OUR STORY</p>
+      <hr style="margin-bottom: 36px;">
+<div class="col-6 pr-md-5 pl-2">
+<img src="https://i.ibb.co/6PKNJGM/About-instead-of-the-jelly-image-1.jpg"  class="img-fluid">
+</div>
+<div class="col-6 my-auto pl-md-5 pl-2">
+    <p class="p24">
+       There are more than one definition of Mindful Lifestyle. We call it, the 0% Lifestyle. 
+A type of lifestyle that is good for the body, good for the community, and good for the environment. 
+
+      </p>
+      <a href="/structure" class="btn-primary mt-md-4 mt-2" >Read more about TCG structure</a>
+</div>
+<p style="visibility:hidden" class="p18h">OUR STORY</p>
+
+  <div class="col-6 my-auto pr-md-5 pl-2">
+        <p class="p24">
+      There are more than one definition of Mindful Lifestyle. We call it, the 0% Lifestyle.A type of lifestyle that is good for the body, good for the community, and good for the environment.
+      </p>
+  
+    
+          <a href="/people" class="btn-primary mt-md-4 mt-2" >Read more about TCG team</a>
+</div>
+
+
+
+<div class="col-6  pl-md-5 pl-2">
+  <img src="https://i.ibb.co/RHZXzrv/About-us-cocktail-2.jpg"  class="img-fluid">
+
+</div>
+
+    </div>
+          <div class="content">
+        <p class="d-none p18h">OUR STORY</p>
+        <p class="p24">
+      We want to help consumers drink less alcohol and animal products, eat less meat and more organic, consume less sugar and consume healthier in order to be happier.Third Culture Group currently employs 45people in 6 countries and has an existing sales team of17 persons in 5 countries. Through this infrastructure,we have existing distribution to over 70 cities in theEU, India and the Middle East.
+      </p><br>
+          <p class="p24">
+      We are actively building awareness around the 0% Lifestyle bymaking 0%brands easily accessible to consumers who want to consume more responsibly and still enjoy themselves.
+      </p>
+    <img id="content_img" :srcset="require('~/assets/img/about/about_img.png').srcSet" alt="about image" class="d-none img-fluid">
+    </div>
+    <div id="ourpeople" class="d-none layout">
       <p>OUR PEOPLE</p>
       <img :srcset="require('~/assets/img/ourpeople.png').srcSet" alt="" />
-      <nuxt-link to="/people"  class="btn-primary">Meet our team</nuxt-link>
+      <a href="/people"  class="btn-primary">Meet our team</a>
     </div>
     <div v-lazy-container="{ selector: 'img' }" class="clients">
       <p class="p18">SOME OF OUR CLIENTS</p>
@@ -25,15 +69,15 @@
       <hr />
       <div class="imgbank" id="up">
         <div v-lazy-container="{ selector: 'img' }" v-for="brand in brands.body" class="">
-          <img
+          <a :href='brand.brand_link'><img
             :srcset="require('~/assets/img/brands/'+brand.brand_910).srcSet"
             alt=""
             class="img-fluid"
-          />
+          /></a>
           <p class="p20">{{brand.brand_name}}</p>
         </div>
       </div>
-      <nuxt-link to="/brands" class="btn-primary">Learn more about our brands </nuxt-link>
+      <a href="/brands" style="visibility: hidden;" class="btn-primary">Learn more about our brands </a>
     </div>
   </div>
 </template>

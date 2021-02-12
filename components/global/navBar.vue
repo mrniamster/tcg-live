@@ -1,14 +1,14 @@
 <template>
   <nav id="navbar" class="shadow navbar navbar-expand-lg navbar-light bg-white">
     <div class="container-fluid">
-      <nuxt-link class="navbar-brand" to="/">
+      <a class="navbar-brand" href="/">
         <img
           
           class="d-inline-block align-top img-fluid"          
           src="/assets/img/logo.svg"
           alt=""
         />
-      </nuxt-link>
+      </a>
       <button
         class="navbar-toggler"
         type="button"
@@ -23,22 +23,30 @@
       <div id="navbarText" class="collapse navbar-collapse">
         <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <nuxt-link class="nav-link active" aria-current="page" to="/about">About us</nuxt-link>
+             <a class="nav-link active" href="/people">Our People</a>
+
+          </li>
+            <li class="nav-item">
+                       <a class="nav-link active" aria-current="page" href="/structure">TCG Structure</a>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/people">People</nuxt-link>
+             <a class="nav-link" href="/brands">Our Brands</a>
+      
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/brands">Our Brands</nuxt-link>
+             <a class="nav-link" href="/work">Our Work</a>
+          
+                            
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/clients">Our Clients</nuxt-link>
+             <a class="nav-link" href="/medias">Media</a>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/medias">Our Media</nuxt-link>
+               <a class="nav-link" href="/contact">Contact</a>
+            
           </li>
-          <li class="nav-item">
-            <nuxt-link class="nav-link" to="/contact">Contact</nuxt-link>
+          <li class="d-none nav-item">
+         <a class="nav-link active" aria-current="page" href="/about">About us</a>
           </li>
         </ul>
       </div>

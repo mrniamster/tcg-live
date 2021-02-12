@@ -21,15 +21,15 @@ hr:nth-child(1){@include margin(0,0,32px,0);}
         .img-fluid{
             max-width:96%;
         }
-        &:nth-child(3n+1){
+        &:nth-child(4n+1){
             @include padding(0px,20px,75px,0px); 
             //float: left;max-width: 290px;
         }
-        &:nth-child(3n){
+        &:nth-child(4n){
            @include padding(0,0px,75px,20px);
            //float: right;max-width: 290px; 
         }
-        &:nth-child(3n+2){
+        &:nth-child(4n+2){
             //background-color: red;
             @include padding(0px,10px,75px,10px); 
             //margin:0 auto;max-width: 290px;

@@ -3,6 +3,9 @@
     <bannerComp
       img="media_test.png"
       title="Media"
+      dim="true"
+       subtitle="Bhutan, our second home, surprised the world in the 1970s by introducing the Gross National Happiness index to combat the popularly accepted method of measuring the nations’ success through economy.
+"
     />
   <div class="layoutx">
     <div class="d-none press">
@@ -54,16 +57,35 @@
 
             </div>
             <div class="col-md-3">
-                            <a @click="view('none')" target="_blank" href="https://veenwaters.com/scenearticle/5-minutes-with-aman-gupta/"><div class="card bg-dark text-white">
+                            <a @click="view('press')" target="_blank" >
+                              <div class="card bg-dark text-white">
   <img class="card-img dim" src="/assets/img/extra/aman.png" alt="Card image">
   <div class="card-img-overlay">
-    <h5 class="card-title text-center">Aman's  Interview</h5>
+    <h5 class="card-title text-center">Press</h5>
   </div>
 </div></a>
 
             </div>
           </div>
      </div>
+
+ <div v-if="toggle=='press'"  class="press">
+    <p class="p18h">PRESS SAID</p>
+    <hr>
+     <div class="row" >
+       <div id="article" class="imgbank" v-for="i in 1">
+       <div class="profile" v-for="press in presssaid">
+         <div class="frame">
+         <a target="_blank" :href="press.link"><img :src="press.img"></a>
+        </div>
+        <div class="info">
+          <p class="title">{{press.title}}</p>
+          <p class="date p18" ><a class="btn-primary" target="_blank" :href="press.link">Read more</a></p>
+        </div>
+       </div>
+       </div>
+     </div>
+  </div>
 
 
         <div v-if="toggle=='trends'"  class="categoires trends">
@@ -122,6 +144,9 @@ export default {
   data(){
     return{
         toggle:'blogs',
+        presssaid:[
+          {title:'5 Minutes With Aman Gupta',img:'/assets/img/media/aman.png',link:'https://veenwaters.com/scenearticle/5-minutes-with-aman-gupta/'}
+        ]
     }
   },
   watch: {},

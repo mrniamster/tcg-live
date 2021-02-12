@@ -8,7 +8,7 @@ $bp:800px;
 @import url(https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css);
 @import url('/assets/fonts/stylesheet.css');
 body{margin:0px}
-.col-md-6,.row,.col-md-4,.col-md-8,{
+.col-md-6,.row,.col-md-4,.col-md-8,.col-6{
   @include pad(0px);
 }
 #navbar {
@@ -166,6 +166,31 @@ a{&:hover{color:$pri-color}}
       }
     }
   }
+
+  #footerx{
+    background-color: $pri-color;
+    height: 210px;
+    justify-content: space-between;
+    @include bp(md){
+      justify-content: center !important;
+      div:nth-child(1){
+        text-align: center;
+      }
+    }
+    p{
+      color:$sec-color;
+      margin: 0;
+      line-height: 125%;
+      color: rgba(255, 255, 255, 0.5)
+
+    }
+    a {
+      color: $sec-color;
+      .fa-inverse{
+        color: $pri-color;
+      }
+    }
+  }
  
  //elements
   .btn-primary{
@@ -226,8 +251,15 @@ font-size: 72px;
 line-height: 100%;
 color: $sec-color;
 @include bp(md){
-  font-size: 35px;
+  font-size: 25px;
 }
+.sh{
+  font-size: 24px;
+  @include bp(md){
+    font-size: 12px;
+  }
+}
+
 position: absolute;
 vertical-align:middle;
 top: 50%;

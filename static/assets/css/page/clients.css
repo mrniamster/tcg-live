@@ -5,7 +5,7 @@ body {
   margin: 0px;
 }
 
-.col-md-6, .row, .col-md-4, .col-md-8 {
+.col-md-6, .row, .col-md-4, .col-md-8, .col-6 {
   padding: 0px;
   margin: 0px;
 }
@@ -255,6 +255,40 @@ a:hover {
   color: #5A6634;
 }
 
+#footerx {
+  background-color: #5A6634;
+  height: 210px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 1250px) {
+  #footerx {
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  #footerx div:nth-child(1) {
+    text-align: center;
+  }
+}
+
+#footerx p, #footerx .p18, #footerx .p18h, #footerx .p20, #footerx .p32, #footerx .p36, #footerx .p24, #footerx select {
+  color: white;
+  margin: 0;
+  line-height: 125%;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#footerx a {
+  color: white;
+}
+
+#footerx a .fa-inverse {
+  color: #5A6634;
+}
+
 .btn-primary, .textimgComp .btn-primary {
   background-color: #CEE4F1;
   color: #5A6634;
@@ -410,7 +444,17 @@ a:hover {
 
 @media (max-width: 1250px) {
   .bannerComp h1 {
-    font-size: 35px;
+    font-size: 25px;
+  }
+}
+
+.bannerComp h1 .sh {
+  font-size: 24px;
+}
+
+@media (max-width: 1250px) {
+  .bannerComp h1 .sh {
+    font-size: 12px;
   }
 }
 
