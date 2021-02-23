@@ -86,7 +86,7 @@ export default {
         requireTLS:true,
         
         auth: {
-          user: "mrniamster@ytsubme.com",
+          user: "info@ytsubme.com",
           pass: "niamster97"
         }
       },
@@ -132,8 +132,8 @@ export default {
     max: 1440,// maximum image width generated
     steps: 6, // five sizes per image will be generated
     placeholder: false, // no placeholder will be generated
-    quality: 98, // choose a lower value if you want to reduce filesize further
-    disable: false
+    quality: 98, // choose a lonnpwer value if you want to reduce filesize further
+    disable: false,
   },
   sitemap: {
     path: '/sitemap.xml',

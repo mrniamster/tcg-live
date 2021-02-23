@@ -3,7 +3,7 @@ title: Lose the booze Why giving up alcohol improves your immune system
 description: 'Every day, our immune system protects us from over 100,000,000 viruses and bacteria, and occasionally even kills spontaneous cancer cells before they get a chance to mutate.'
 author: JOEL WILLANS
 img: media/p4/fruit.jpg
-thumbnail: media/p4/thumbnail.jpg
+thumbnail: media/p4/thumbnail.png
 oglink: 'https://zeropercent.shop/giving-up-alcohol-and-immune-system/'
 ---
 

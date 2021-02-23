@@ -4,8 +4,8 @@
       img="media_test.png"
       title="Media"
       dim="true"
-       subtitle="Bhutan, our second home, surprised the world in the 1970s by introducing the Gross National Happiness index to combat the popularly accepted method of measuring the nations’ success through economy.
-"
+      sub="Pictured: Bhutan, our second home, surprised the world in the 1970s by introducing the Gross National Happiness index to combat the popularly accepted method of measuring the nations’ success through economy."
+       subtitle=""
     />
   <div class="layoutx">
     <div class="d-none press">
@@ -32,26 +32,26 @@
           <div class="row" role="button">
             <div class="col-md-3">
               <a @click="view('blogs')"><div class="card bg-dark text-white">
-  <img class="card-img dim" src="/assets/img/extra/blogs.png" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title text-center">Blog</h5>
+  <img class="card-img" src="/assets/img/extra/nk.png" alt="Card image">
+  <div class="card-img-overlay" style="top:30px">
+    <h5 class="card-title text-center">Blog Stories</h5>
   </div>
 </div></a>
             </div>
             <div class="col-md-3">
                           <a @click="view('image-bank')">  <div class="card bg-dark text-white">
-  <img class="card-img dim" src="/assets/img/extra/image-bank.png" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title text-center">Image Bank</h5>
+  <img class="card-img" src="/assets/img/extra/nk.png" alt="Card image">
+  <div class="card-img-overlay" style="top:30px">
+    <h5 class="card-title text-center">TCG Image Bank</h5>
   </div>
 </div></a>
 
             </div>
             <div class="col-md-3">
                            <a @click="view('trends')"> <div class="card bg-dark text-white">
-  <img class="card-img dim" src="/assets/img/extra/trends.jpg" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title text-center">Trends</h5>
+  <img class="card-img " src="/assets/img/extra/nk.png" alt="Card image">
+  <div class="card-img-overlay" style="top:30px">
+    <h5 class="card-title text-center">Mindful Lifestyle Trends</h5>
   </div>
 </div></a>
 
@@ -59,9 +59,9 @@
             <div class="col-md-3">
                             <a @click="view('press')" target="_blank" >
                               <div class="card bg-dark text-white">
-  <img class="card-img dim" src="/assets/img/extra/aman.png" alt="Card image">
-  <div class="card-img-overlay">
-    <h5 class="card-title text-center">Press</h5>
+  <img class="card-img" src="/assets/img/extra/nk.png" alt="Card image">
+  <div class="card-img-overlay" style="top:30px">
+    <h5 class="card-title text-center">Press Coverage</h5>
   </div>
 </div></a>
 
@@ -122,7 +122,8 @@
               </div>
               <div class="info">
               <p class="title">{{logo.title}}</p>
-              <a target="_blank" :href="logo.dl" style="cursor:pointer;color:#5A6634" class="date text-decoration-none" download><span style="display: inline-grid;"><img src="/assets/img/download.svg"></span> Download</a>
+              <a 
+  @click.prevent="downloadImg(logo.dl)"   :href="logo.dl" style="cursor:pointer;color:#5A6634" class="date text-decoration-none" download><span style="display: inline-grid;" download><img src="/assets/img/download.svg"></span> Download</a>
               </div>
               </div>
             </div>
@@ -156,7 +157,16 @@ export default {
   methods:{
     view:function(value){
       this.toggle=value;
-    }
+    },
+           downloadImg(link) {
+      let url = link;
+      fetch(url)
+        .then((response) => response.blob())
+        .then((blob) => {
+          saveAs(blob, 'image_name.jpg');
+        });
+      console.log('downloading', url);
+    },
   },
   mounted(){console.log(this.articles)}
 }

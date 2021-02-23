@@ -13,7 +13,7 @@
 <p class="p24">Our journey started in 2007 as VEEN Waters and Third Culture Group (formerly VEEN Waters Finland Oy) got its avatar in July of 2020.</p>
 
 <p class="p24">We believe that mindful consumers are looking for honest and transparent brands that are focused onwell-being, produced with high-quality ingredients, are earth-friendly alternatives and enjoyable to consume. We believe a mindful lifestyle is the future of consumption.</p>
-    <img id="content_img" :srcset="require('~/assets/img/about/about_img.png').srcSet" alt="about image" class="d-none img-fluid">
+
     </div>
 
 

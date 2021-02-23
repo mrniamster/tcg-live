@@ -16,9 +16,8 @@ Himalayan Kingdom of Bhutan.
       <p class="p24">
         We own the brands VEEN, Ayurveda
 Super Shots, Ayurveda Water, Nordic
-Mixers, Ayur Atmospherics, VEEN
-Plant-Based, <b>Ayurveda Gummi</b>
-to be launched in 2021.
+Mixers. Ayur Atmospherics, VEEN
+Plant-Based, Ayurveda Gummi.
       </p>
     </div>
    <div id="box2" class="layoutx box2">
@@ -37,7 +36,7 @@ to be launched in 2021.
    <div class="layoutx-300 thead bg-pri-color">
 <p class="p18h">ALLIANCE BRANDS</p>
       <p class="p24">
-       Third Culture Group acts as an alliance of brands and distributors focused on mindful consumption. The Alliance brand and TCG are the back bone to a multi-market, multi-brand sales and distribution engine.
+       Third Culture Group acts as an alliance of brands and distributors focused on mindful consumption. The Alliance brands and TCG are the back bone to a multi-market, multi-brand sales and distribution engine.
       </p>
    </div>
    <div id="box1" class="layoutx box1 ">

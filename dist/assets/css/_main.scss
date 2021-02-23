@@ -11,6 +11,9 @@ body{margin:0px}
 .col-md-6,.row,.col-md-4,.col-md-8,.col-6{
   @include pad(0px);
 }
+.bg-primary{
+  background-color: #f3f8fc !important;
+}
 #navbar {
     height: 128px;
     width: 100%;
@@ -242,6 +245,12 @@ a{&:hover{color:$pri-color}}
 }
 
 .bannerComp{
+ 
+  .sub{
+    font-size:12px;position: absolute;bottom: 4%;left: 4%;
+    @include bp(md){font-size: 6px;}
+   }
+  
 position: relative;
 margin: 0;
 padding: 0;

@@ -1,5 +1,10 @@
 @import '_main.scss','mixin.scss';
-
+.gallery-text{
+    h1{
+        top: 70%;
+        color:$pri-color;
+    }
+}
 #ourpeople{
     @include margin(0,0,120px,0)
     p{

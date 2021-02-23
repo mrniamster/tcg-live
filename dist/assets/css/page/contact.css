@@ -13,6 +13,10 @@ body {
   margin: 0px;
 }
 
+.bg-primary {
+  background-color: #f3f8fc !important;
+}
+
 #navbar {
   height: 128px;
   width: 100%;
@@ -429,6 +433,19 @@ a:hover {
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.bannerComp .sub {
+  font-size: 12px;
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+}
+
+@media (max-width: 1250px) {
+  .bannerComp .sub {
+    font-size: 6px;
+  }
 }
 
 .bannerComp h1 {
@@ -849,6 +866,10 @@ body {
   margin: 0px;
 }
 
+.bg-primary {
+  background-color: #f3f8fc !important;
+}
+
 #navbar {
   height: 128px;
   width: 100%;
@@ -1265,6 +1286,19 @@ a:hover {
   position: relative;
   margin: 0;
   padding: 0;
+}
+
+.bannerComp .sub {
+  font-size: 12px;
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+}
+
+@media (max-width: 1250px) {
+  .bannerComp .sub {
+    font-size: 6px;
+  }
 }
 
 .bannerComp h1 {

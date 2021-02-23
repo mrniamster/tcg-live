@@ -13,10 +13,18 @@
           <div class="modal-info">
             <p class="name">{{Name}}</p>
             <p class="job-title">{{Job_Title}}</p>
-            <p class="location p18"><i class="fas fa-map-marker-alt"></i> Location: {{Location}}</p>
-            <p class="email p18"><i class="fas fa-envelope-open"></i> Email: {{Email}}</p>
+            <p class="location p18"><i class="fas fa-map-marker-alt"></i>  {{Location}}</p>
+            <p class="email p18"><i class="fas fa-envelope-open"></i> {{Email}}</p>
             <p class="d-none contact email"><i class="fas fa-phone-square-alt"></i> Phone No:  +350 00 0000 0000</p>           
+            <p class="social email p18">
+      
+<i class="fab fa-linkedin-in"></i> <a style="color:#5A6634" class="text-decoration-none" :href="Linkedin">Connect with {{Name.split(' ')[0]}} 
+                  </a></p>
+                
+
+  
             <p class="d-none bio">
+
               Ornare pellentesque sollicitudin id sapien sed iaculis. Risus leo, neque, adipiscing sed. Vulputate sagittis, amet, rhoncus phasellus habitasse. Sagittis, sagittis non ut nisl sagittis volutpat donec ut.
             </p>
           </div>
@@ -35,7 +43,7 @@
 
 <script>
     export default {
-          props:['Name','Email','Job_Title','Profileimg','Location','Show']
+          props:['Name','Email','Job_Title','Profileimg','Location','Show','Linkedin']
        
     }
 </script>

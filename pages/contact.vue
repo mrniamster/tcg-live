@@ -31,7 +31,7 @@
         </div>      
         </div>
     </div>
-    <div class="layoutx investor">
+    <div class="layoutx ">
       <div class="d-none layout300x">
 <h4 class="p18h">INVESTOR RELATIONS</h4>
 <p class="p24">Odio vulputate donec vitae, nullam eros, nisl feugiat. Non bibendum duis nunc facilisis massa feugiat viverra elit facilisis. Mi mi euismod sit suspendisse. Aliquam pulvinar etiam posuere leo gravida viverra commodo gravida orci.</p>

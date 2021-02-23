@@ -4,19 +4,36 @@
     <bannerComp
       img="home_test.png"
       title="We believe a mindful lifestyle is the future of consumption"
-      dim="true"
+      dim=""
+      sub=""
     />
     <!-- <textimgComp /> -->
-    <div class="row layoutx">
-      <p style="" class="p18h">OUR STORY</p>
-      <hr style="margin-bottom: 36px;">
+      <div class="content">
+        <p class="p18h">OUR STORY</p>
+         <hr class="d-none" style="margin-bottom: 36px;">
+        <p class="p24">
+     We are a Finnish company on a mission to create the world’s leading alliance of brands and distributors operating a common sales/distribution platform and route-to-market for mindful consumption. 
+     </p><br>
+          <p class="p24">
+     Our journey started in 2007 as VEEN Waters and Third Culture Group (formerly VEEN Waters Finland Oy) got its avatar in July of 2020.
+      </p><br>
+      <p class="p24">
+        We believe that mindful consumers are looking for honest and transparent brands that are focused on well-being, produced with high-quality ingredients, are earth-friendly alternatives and enjoyable to consume.
+      </p><br>
+         <p class="p24">
+           We believe a mindful lifestyle is the future of consumption.
+      </p>
+    </div>
+
+    <div class="row layout">
+      <p style="" class="d-none p18h">OUR STORY</p>
+      <hr class="d-none " style="margin-bottom: 36px;">
 <div class="col-6 pr-md-5 pl-2">
 <img src="https://i.ibb.co/6PKNJGM/About-instead-of-the-jelly-image-1.jpg"  class="img-fluid">
 </div>
 <div class="col-6 my-auto pl-md-5 pl-2">
     <p class="p24">
-       There are more than one definition of Mindful Lifestyle. We call it, the 0% Lifestyle. 
-A type of lifestyle that is good for the body, good for the community, and good for the environment. 
+      At TCG, we own, produce, represent, market, distribute and sell leading brands in the categories of 0% alcohol, 0% dairy, 0% pesticides, 0% sugar, 0% microplastic, 0% gluten, fine water and 0% meat.
 
       </p>
       <a href="/structure" class="btn-primary mt-md-4 mt-2" >Read more about TCG structure</a>
@@ -25,11 +42,13 @@ A type of lifestyle that is good for the body, good for the community, and good 
 
   <div class="col-6 my-auto pr-md-5 pl-2">
         <p class="p24">
-      There are more than one definition of Mindful Lifestyle. We call it, the 0% Lifestyle.A type of lifestyle that is good for the body, good for the community, and good for the environment.
-      </p>
+      There is more than one definition of mindful lifestyle.
+      </p><br>
+       <p class="p24">
+          We call it, the Zero Percent lifestyle. A type of lifestyle that is good for the body, good for the community, and good for the environment.
+        </p>
   
-    
-          <a href="/people" class="btn-primary mt-md-4 mt-2" >Read more about TCG team</a>
+
 </div>
 
 
@@ -42,12 +61,15 @@ A type of lifestyle that is good for the body, good for the community, and good 
     </div>
           <div class="content">
         <p class="d-none p18h">OUR STORY</p>
+       
         <p class="p24">
-      We want to help consumers drink less alcohol and animal products, eat less meat and more organic, consume less sugar and consume healthier in order to be happier.Third Culture Group currently employs 45people in 6 countries and has an existing sales team of17 persons in 5 countries. Through this infrastructure,we have existing distribution to over 70 cities in theEU, India and the Middle East.
+      At TCG we want to help consumers drink less alcohol and animal products, eat less meat and more organic, consume less sugar and consume healthier in order to be happier. Third Culture Group currently employs 45 people in 6 countries and has an existing sales team of 17 persons in 5 countries. Through this infrastructure, we have existing distribution to over 70 cities in the EU, India and the Middle East.
       </p><br>
-          <p class="p24">
-      We are actively building awareness around the 0% Lifestyle bymaking 0%brands easily accessible to consumers who want to consume more responsibly and still enjoy themselves.
+          <p class="d-none p24">
+      We are actively building awareness around the Zero Percent Lifestyle by making 0% brands easily accessible to consumers who want to consume more responsibly and still enjoy themselves.
       </p>
+          
+          <a href="/people" class="btn-primary mt-md-4 mt-2" >Get to know our people</a>
     <img id="content_img" :srcset="require('~/assets/img/about/about_img.png').srcSet" alt="about image" class="d-none img-fluid">
     </div>
     <div id="ourpeople" class="d-none layout">
@@ -55,7 +77,7 @@ A type of lifestyle that is good for the body, good for the community, and good 
       <img :srcset="require('~/assets/img/ourpeople.png').srcSet" alt="" />
       <a href="/people"  class="btn-primary">Meet our team</a>
     </div>
-    <div v-lazy-container="{ selector: 'img' }" class="clients">
+    <div v-lazy-container="{ selector: 'img' }" class="d-none clients">
       <p class="p18">SOME OF OUR CLIENTS</p>
       <img
         :srcset="require('~/assets/img/logos2.png').srcSet"

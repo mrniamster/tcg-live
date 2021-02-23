@@ -15,7 +15,7 @@
        <div id="article" class="d-md-flex flex-nowarp  justify-content-around box" v-for="i in 3">
        <div class="profile" v-for="i in 4">
          <div class="frame">
-         <img :srcset="require('~/assets/img/media/article.png').srcSet">
+         <!-- <img :srcset="require('~/assets/img/media/article.png').srcSet"> -->
         </div>
         <div class="info">
           <p class="title">Title of Article</p>
@@ -52,7 +52,8 @@
               </div>
               <div class="info">
               <p class="title">{{logo.title}}</p>
-              <a target="_blank" :href="logo.dl" style="cursor:pointer;color:#5A6634" class="date text-decoration-none" download><span style="display: inline-grid;"><img src="/assets/img/download.svg"></span> Download</a>
+              <a target="_blank" :href="logo.dl" style="cursor:pointer;color:#5A6634" class="date text-decoration-none"  v-text="item.title"
+  @click.prevent="downloadItem(logo.title)" ><span style="display: inline-grid;"><img src="/assets/img/download.svg" ></span> Download</a>
               </div>
               </div>
             </div>
@@ -74,6 +75,20 @@ export default {
   watch: {},
   head: {
     link: [{ rel: 'stylesheet', href: '/assets/css/page/media.css' }],
+  },
+  methods:{
+     downloadItem ({ url, label }) {
+       console.log('x');
+    Axios.get(url, { responseType: 'blob' })
+      .then(response => {
+        const blob = new Blob([response.data], { type: 'application/pdf' })
+        const link = document.createElement('a')
+        link.href = URL.createObjectURL(blob)
+        link.download = label
+        link.click()
+        URL.revokeObjectURL(link.href)
+      }).catch(console.error)
+  }
   },
   mounted(){console.log(this.articles)}
 }

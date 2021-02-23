@@ -1,4 +1,10 @@
 @import '../_main.scss','../mixin.scss';
+#banner{
+@include padding(0,150px,0,150px);
+@include bp(md){
+    @include padding(0,35px,0,35px);
+}
+}
 .thead{
     
     p{

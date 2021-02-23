@@ -10,6 +10,10 @@ body {
   margin: 0px;
 }
 
+.bg-primary {
+  background-color: #f3f8fc !important;
+}
+
 #navbar {
   height: 128px;
   width: 100%;
@@ -428,6 +432,19 @@ a:hover {
   padding: 0;
 }
 
+.bannerComp .sub {
+  font-size: 12px;
+  position: absolute;
+  bottom: 4%;
+  left: 4%;
+}
+
+@media (max-width: 1250px) {
+  .bannerComp .sub {
+    font-size: 6px;
+  }
+}
+
 .bannerComp h1 {
   font-family: Chap;
   font-size: 72px;
@@ -835,6 +852,40 @@ a:hover {
 
 .dim {
   -webkit-filter: brightness(50%);
+}
+
+#banner {
+  padding-top: 0;
+  padding-right: 150px;
+  padding-bottom: 0;
+  padding-left: 150px;
+}
+
+@media (max-width: 1250px) {
+  #banner {
+    padding-top: 0;
+    padding-right: 75px;
+    padding-bottom: 0;
+    padding-left: 75px;
+  }
+}
+
+@media (max-width: 1250px) {
+  #banner {
+    padding-top: 0;
+    padding-right: 35px;
+    padding-bottom: 0;
+    padding-left: 35px;
+  }
+}
+
+@media (max-width: 1250px) and (max-width: 1250px) {
+  #banner {
+    padding-top: 0;
+    padding-right: 17.5px;
+    padding-bottom: 0;
+    padding-left: 17.5px;
+  }
 }
 
 .thead p:last-child, .thead .p18:last-child, .thead .p18h:last-child, .thead .p20:last-child, .thead .p32:last-child, .thead .p36:last-child, .thead .p24:last-child, .thead select:last-child {

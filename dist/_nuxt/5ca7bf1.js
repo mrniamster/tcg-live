@@ -1,1 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[12],{404:function(t,e,n){"use strict";n.r(e);var c={props:["data"]},r=n(23),component=Object(r.a)(c,(function(){var t=this.$createElement;return(this._self._c||t)("p",[this._v(this._s(this.data)+" adsd")])}),[],!1,null,"8cab0556",null);e.default=component.exports}}]);

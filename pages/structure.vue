@@ -6,13 +6,15 @@
       dim="true"
       subtitle="Our Group Business is split into three divisions"
     />
-    <div class="content">
-        <p class="p18h">OUR STORY</p>
-        <p class="p24">We are a Finnish company on a mission to create the world’s leading alliance of brands anddistributors operating a common sales/distribution platform and route-to-market for mindful consumption.</p>
-
-<p class="p24">Our journey started in 2007 as VEEN Waters and Third Culture Group (formerly VEEN Waters Finland Oy) got its avatar in July of 2020.</p>
-
-<p class="p24">We believe that mindful consumers are looking for honest and transparent brands that are focused onwell-being, produced with high-quality ingredients, are earth-friendly alternatives and enjoyable to consume. We believe a mindful lifestyle is the future of consumption.</p>
+    <div class="layoutx-300 thead bg-primary">
+        <p class="p18h d-none">OUR STRUCTURE</p>
+        <p class="p24">Third Culture Group business is split into three divisions:</p>
+        <br>
+          <ul>
+            <li class="p24">Production</li>
+            <li class="p24">Brand Building</li>
+            <li class="p24">Route to Market</li>
+          </ul>
     <img id="content_img" :srcset="require('~/assets/img/about/about_img.png').srcSet" alt="about image" class="d-none img-fluid">
     </div>
 
@@ -26,13 +28,14 @@
           <hr>   <br>
 <div class="row  box1">
 <div class="col-6 pr-md-5">
-<img src="https://i.ibb.co/cLR2QtG/helena-yankovska-V8-OPvfj6-Udw-unsplash-1.jpg"  class="img-fluid">
+<img :srcset="require('~/assets/img/structure/bhutan.png').srcSet"  class="img-fluid">
 </div>
 <div class="col-6 my-auto pl-md-5 p-2">
    <p class="p18h">1. PRODUCTION</p>
-    <p class="p24">
-    We own and operate two spring water and natural mineral water bottling plants in Finnish Lapland and the Himalayan Kingdom of Bhutan.
-
+  
+   
+      <p class="p24">
+       Within the first division, Production, TCG has exclusive tie ups and ownership with two extremely rare, unique and remote water sources in Finnish Lapland and the Himalayan Kingdom of Bhutan. With own bottling plants at these sources, TCG is producing own range of products under the VEEN brand.
       </p>
       <!-- <a href="/people" class="btn-primary mt-md-4" >Read more about TCG structure</a> -->
 </div>
@@ -42,27 +45,33 @@
         <p class="p24">
      
 
-We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayur Atmospherics*, VEEN Plant-Based*, Ayurveda Gummi*
+We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayur Atmospherics, VEEN Plant-Based, Ayurveda Gummi.
 </p>
-<p class="p18">*to be launched in 2021.</p>
 </div>
 <div class="col-6  pl-md-5 p-2">
-  <img src="https://i.ibb.co/JqzNRL8/helena-yankovska-V8-OPvfj6-Udw-unsplash-1.png"  class="img-fluid">
+  <img :srcset="require('~/assets/img/structure/nordic.jpg').srcSet" class="img-fluid">
 
 </div>
 <p style="visibility:hidden" class="p18h">OUR STORY</p>
 <div class="col-6  pr-md-5">
- <img src="https://i.ibb.co/7QnQQKm/helena-yankovska-V8-OPvfj6-Udw-unsplash-1-1.png"  class="img-fluid">
+ <img :srcset="require('~/assets/img/structure/veen.png').srcSet"   class="img-fluid">
 
 </div>
 <div class="col-6  pl-md-5 p-2 my-auto">
       <p class="p18h">3. ROUTE TO MARKET</p>
-        <p class="p24">Zero Percent is our route to market brand developed to retail and distribute our own brands,allicance partner brands and exclusively distributed brands through our multi-channel D2C retail, HORECA and retail distribution approach. </p>
-        <p class="d-none d-md-block p24">
-          The platform represents leading brands in the 0% categoreis of 0% alchol,0% dairy, 0% pesticides, 0% sugar, 0% microplastic,0% gluten, fine waters and 0% meat.
+        <p class="p24">
+        Zero Percent is our route-to-market brand developed to retail and distribute our own brands, alliance partner brands and exclusively distributed brands through our multi-channel D2C retail, HORECA and retail distribution approach.
         </p>
-      <p class="d-none d-md-block p18">*to be launched in 2021.</p>
+        <br>
+        <p class="p24">
+        The platform represents leading brands in the 0% categories of 0% alcohol,0% dairy, 0% pesticides, 0% sugar, 0% microplastic,0% gluten, fine waters and 0% meat.
+        </p>
+      <!-- <p class="d-none d-md-block p18">*to be launched in 2021.</p> -->
 </div>
+       
+      <div class="map p-5"><br><br>
+        <img src="https://i.ibb.co/ccDMMTb/map.png"  class="img-fluid">
+      </div>
 
        <div class="d-md-none">
         <p class="d-none p18h">OUR STORY</p>
@@ -83,7 +92,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
     <div class="d-none container-fluid textimgComp">
      <div class="flex-container">
     <div  v-lazy-container="{ selector: 'img' }"  class="flex-item">
-      <img :data-srcset="require('~/assets/img/about/textimg.png').srcSet" class="img-fluid" />
+      <img :srcset="require('~/assets/img/about/textimg.png').srcSet" class="img-fluid" />
     </div>
        <div class="flex-item" id="spacer">
 
@@ -119,7 +128,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
             </div>
             <div class="col-md-4 p-2">
                           <a @click="view('bb')">  <div class="card bg-dark text-white">
-  <img class="card-img dim" src="/assets/img/extra/bb.png" alt="Card image">
+  <img class="card-img dim"  alt="Card image">
   <div class="card-img-overlay">
     <h5 class="card-title text-center p24 text-white">Brand Building</h5>
   </div>
@@ -144,7 +153,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
      <div class="flex-container">
     <div v-lazy-container="{ selector: 'img' }"  class="flex-item">
   
-            <img :data-srcset="require('~/assets/img/about/1.png').srcSet" class="img-fluid" />
+            <img :srcset="require('~/assets/img/about/1.png').srcSet" class="img-fluid" />
      
     </div>
     <div class="flex-item" id="spacer">
@@ -154,6 +163,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
           <p style="visibility:hidden" class="p18">OUR STORY</p>
       <p>We own and operate two spring water and natural mineral water bottling plants in Finnish Lapland and the Himalayan Kingdom of Bhutan.
     </p>
+    
    
       <a href="/people" class="d-none btn-primary" >Read more about TCG team</a>
     </div>
@@ -164,7 +174,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
      <div class="flex-container">
     <div v-lazy-container="{ selector: 'img' }"  class="flex-item">
   
-            <img :data-srcset="require('~/assets/img/about/2.png').srcSet" class="img-fluid" />
+            <img :srcset="require('~/assets/img/about/2.png').srcSet" class="img-fluid" />
      
     </div>
     <div class="flex-item" id="spacer">
@@ -185,7 +195,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
      <div class="flex-container">
     <div v-lazy-container="{ selector: 'img' }"  class="flex-item">
   
-            <img :data-srcset="require('~/assets/img/about/3.png').srcSet" class="img-fluid" />
+            <img :srcset="require('~/assets/img/about/3.png').srcSet" class="img-fluid" />
      
     </div>
     <div class="flex-item" id="spacer">
@@ -221,7 +231,7 @@ A type of lifestyle that is good for the body, good for the community, and good 
 
     </div>
     <div  v-lazy-container="{ selector: 'img' }"  class="flex-item">
-      <img :data-srcset="require('~/assets/img/about/textimg2.png').srcSet" class="img-fluid" />
+      <img :srcset="require('~/assets/img/about/textimg2.png').srcSet" class="img-fluid" />
     </div>
   </div>
   </div>
@@ -249,8 +259,8 @@ A type of lifestyle that is good for the body, good for the community, and good 
       <hr />
       <div class="imgbank" id="up">
         <div v-lazy-container="{ selector: 'img' }" v-for="brand in brands.body" class="">
-          <a :href='brand.brand_link'><img
-            :srcset="require('~/assets/img/brands/'+brand.brand_910).srcSet"
+          <a :href='brand.brand_link'>
+            <img :srcset="require('~/assets/img/brands/'+brand.brand_910).srcSet"
             alt=""
             class="img-fluid"
           /></a>
@@ -279,7 +289,7 @@ export default {
   },
   watch: {},
   head: {
-    link: [{ rel: 'stylesheet', href: '/assets/css/page/about.css' },{ rel: 'stylesheet', href: '/assets/css/index.css' }],
+    link: [{ rel: 'stylesheet', href: '/assets/css/index.css' },{ rel: 'stylesheet', href: '/assets/css/page/about.css' }],
   },
    methods:{
     view:function(value){
