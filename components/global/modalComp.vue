@@ -1,5 +1,5 @@
 <template>
-    <div v-if="Show">
+    <div v-show="Show">
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -8,7 +8,7 @@
     
         <div class="d-md-flex flex-nowarp justify-content-between">
           <div class="modal-img">
-            <img  style="max-width:250px" :srcset="require('~/assets/img/people/'+Profileimg).srcSet">
+            <img  v-if="Profileimg" style="max-width:250px" :srcset="require('~/assets/img/people/'+Profileimg).srcSet">
           </div>
           <div class="modal-info">
             <p class="name">{{Name}}</p>

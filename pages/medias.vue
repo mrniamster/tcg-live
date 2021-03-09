@@ -1,5 +1,11 @@
 <template>
+
   <div>
+    
+               <ModalLoader
+     :src="modal.src"
+     :Show="modal.Show"
+    />
     <bannerComp
       img="media_test.png"
       title="Media"
@@ -70,6 +76,7 @@
      </div>
 
  <div v-if="toggle=='press'"  class="press">
+
     <p class="p18h">PRESS SAID</p>
     <hr>
      <div class="row" >
@@ -80,7 +87,8 @@
         </div>
         <div class="info">
           <p class="title">{{press.title}}</p>
-          <p class="date p18" ><a class="btn-primary" target="_blank" :href="press.link">Read more</a></p>
+          <p v-show="press.link" class="date p18"><a class="btn-primary" target="_blank" :href="press.link">Read more</a></p>
+          <p data-toggle="modal" data-target="#exampleModal" v-show="press.src" class="date p18" ><a class="btn-primary" target="_blank" @click="modaliframe(press.src,true)">Read more </a></p>
         </div>
        </div>
        </div>
@@ -145,18 +153,27 @@ export default {
   data(){
     return{
         toggle:'blogs',
+        modal:{src:'',Show:''},
         presssaid:[
-          {title:'5 Minutes With Aman Gupta',img:'/assets/img/media/aman.png',link:'https://veenwaters.com/scenearticle/5-minutes-with-aman-gupta/'}
+          {title:'5 Minutes With Aman Gupta',img:'/assets/img/media/aman.png',link:'https://veenwaters.com/scenearticle/5-minutes-with-aman-gupta/',src:''},
+          //  {title:'The Hindu Business Line',img:'/assets/img/media/th.png',link:'',src:'/assets/img/extra/pdf/th.pdf'}
+            {title:'The Hindu Business Line',img:'/assets/img/media/th.png',link:'/assets/img/extra/pdf/th.pdf',src:''}
         ]
     }
   },
   watch: {},
   head: {
     link: [{ rel: 'stylesheet', href: '/assets/css/page/media.css' }],
+    script:[{hid:'jquery',src:'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js'}]
   },
   methods:{
     view:function(value){
       this.toggle=value;
+    },
+    modaliframe:function(src,Show){
+      this.modal.src=src;
+      this.modal.Show=Show;
+
     },
            downloadImg(link) {
       let url = link;

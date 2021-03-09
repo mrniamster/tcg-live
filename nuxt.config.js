@@ -130,10 +130,9 @@ export default {
     name: 'img/[hash:7]-[width].[ext]',
     min: 640,// minimum image width generated
     max: 1440,// maximum image width generated
-    steps: 6, // five sizes per image will be generated
     placeholder: false, // no placeholder will be generated
     quality: 98, // choose a lonnpwer value if you want to reduce filesize further
-    disable: false,
+    disable: true,
   },
   sitemap: {
     path: '/sitemap.xml',

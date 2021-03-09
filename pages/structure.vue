@@ -54,7 +54,7 @@ We own the brands VEEN, Ayurveda Super Shots, Ayurveda Water, Nordic Mixers, Ayu
 </div>
 <p style="visibility:hidden" class="p18h">OUR STORY</p>
 <div class="col-6  pr-md-5">
- <img :srcset="require('~/assets/img/structure/veen.png').srcSet"   class="img-fluid">
+ <img :srcset="require('~/assets/img/structure/rtm.png').srcSet"   class="img-fluid">
 
 </div>
 <div class="col-6  pl-md-5 p-2 my-auto">

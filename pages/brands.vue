@@ -22,14 +22,14 @@ Plant-Based, Ayurveda Gummi.
     </div>
    <div id="box2" class="layoutx box2">
     <div class="row"></div> <!---todo remove if the array is >2 -->
-     <div class="row" v-for="brand in brands[0].body">
+     <div class="row" v-for="alibrand in brands[1].body">
        <div class="col-md-6">
-         <img :srcset="require('~/assets/img/brands/'+brand.brand_img).srcSet" alt="" class="img-fluid">
+         <img :srcset="require('~/assets/img/brands/'+alibrand.brand_img).srcSet" alt="" class="img-fluid">
        </div>
        <div class="col-md-6">
-         <p class="p36">{{brand.brand_name}}</p>
-         <p class="p18" >{{brand.brand_info}}</p>
-        <a :href="brand.brand_link" class="btn-primary">Visit Website</a>
+         <p class="p36">{{alibrand.brand_name}}</p>
+         <p class="p18" >{{alibrand.brand_info}}</p>
+        <a :href="alibrand.brand_link" class="btn-primary">Visit Website</a>
        </div>
      </div>
    </div>
@@ -41,14 +41,14 @@ Plant-Based, Ayurveda Gummi.
    </div>
    <div id="box1" class="layoutx box1 ">
    <div class="row"></div> <!---todo remove if the array is >2 -->
-          <div class="row" v-for="alibrand in brands[1].body">
+          <div class="row" v-for="brand in brands[0].body">
        <div class="col-md-6">
-         <img :srcset="require('~/assets/img/brands/'+alibrand.brand_img).srcSet" alt="" class="img-fluid">
+         <img :srcset="require('~/assets/img/brands/'+brand.brand_img).srcSet" alt="" class="img-fluid">
        </div>
        <div class="col-md-6">
-         <p class="p36">{{alibrand.brand_name}}</p>
-         <p class="p18">{{alibrand.brand_info}}</p>
-        <a  :href="alibrand.brand_link" class="btn-primary">Visit Website</a>
+         <p class="p36">{{brand.brand_name}}</p>
+         <p class="p18">{{brand.brand_info}}</p>
+        <a  :href="brand.brand_link" class="btn-primary">Visit Website</a>
        </div>
      </div>
    </div>
