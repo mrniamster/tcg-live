@@ -132,7 +132,7 @@ export default {
     max: 1440,// maximum image width generated
     placeholder: false, // no placeholder will be generated
     quality: 98, // choose a lonnpwer value if you want to reduce filesize further
-    disable: true,
+    disable: false,
   },
   sitemap: {
     path: '/sitemap.xml',
